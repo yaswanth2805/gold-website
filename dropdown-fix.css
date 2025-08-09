@@ -1,0 +1,96 @@
+/* Dropdown Visibility and Functionality Fix */
+/* Ensure dropdown menu appears above other elements including hero sections */
+.dropdown-menu {
+    z-index: 9999 !important;
+    position: absolute !important;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    border: 2px solid rgba(0,0,0,.2) !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.4) !important;
+    min-width: 220px !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+}
+
+/* Ensure dropdown toggle works properly */
+.dropdown-toggle::after {
+    display: inline-block !important;
+    margin-left: 0.255em !important;
+    vertical-align: 0.255em !important;
+    content: "" !important;
+    border-top: 0.3em solid !important;
+    border-right: 0.3em solid transparent !important;
+    border-bottom: 0 !important;
+    border-left: 0.3em solid transparent !important;
+}
+
+/* Make dropdown items clearly visible */
+.dropdown-item {
+    color: #212529 !important;
+    padding: 0.75rem 1.25rem !important;
+    display: block !important;
+    width: 100% !important;
+    clear: both !important;
+    font-weight: 500 !important;
+    text-align: inherit !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: rgba(248, 249, 250, 0.9) !important;
+    color: #1e2125 !important;
+    transform: translateX(5px) !important;
+}
+
+/* Show dropdown on click (Bootstrap default) and hover */
+.dropdown-menu.show {
+    display: block !important;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block !important;
+}
+
+/* Ensure dropdown toggle is clickable */
+.dropdown-toggle {
+    cursor: pointer !important;
+}
+
+/* Ensure navbar has proper z-index for dropdown visibility */
+.navbar {
+    z-index: 1050 !important;
+}
+
+.navbar.sticky-top {
+    z-index: 1050 !important;
+}
+
+/* Ensure dropdown parent has proper positioning */
+.navbar .dropdown {
+    position: relative !important;
+}
+
+/* Fix for mobile dropdown */
+@media (max-width: 991.98px) {
+    .dropdown:hover .dropdown-menu {
+        display: none !important;
+    }
+    
+    .dropdown-menu.show {
+        display: block !important;
+        position: static !important;
+        float: none !important;
+        width: auto !important;
+        margin-top: 0 !important;
+        background-color: rgba(255, 255, 255, 0.98) !important;
+        border: 2px solid rgba(0,0,0,.2) !important;
+        box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.4) !important;
+        backdrop-filter: blur(15px) !important;
+        -webkit-backdrop-filter: blur(15px) !important;
+    }
+}

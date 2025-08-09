@@ -1,0 +1,444 @@
+/* SRISTAR GOLD COMPANY - New Gold-Themed Color Scheme */
+
+/* ===== GOLD COMPANY COLOR PALETTE ===== */
+:root {
+  /* Primary Gold Colors */
+  --primary-gold: #D4AF37;          /* Classic gold */
+  --primary-gold-dark: #B8860B;     /* Dark goldenrod */
+  --primary-gold-light: #F7E98E;    /* Light gold */
+  --secondary-gold: #FFD700;        /* Bright gold */
+  --bronze: #CD7F32;                /* Bronze accent */
+  --antique-gold: #C9B037;          /* Antique gold */
+  
+  /* Rich Earth Tones */
+  --rich-brown: #8B4513;            /* Saddle brown */
+  --warm-brown: #A0522D;            /* Sienna */
+  --light-brown: #DEB887;           /* Burlywood */
+  --chocolate: #7B3F00;             /* Chocolate brown */
+  --mahogany: #C04000;              /* Mahogany */
+  
+  /* Warm Neutrals */
+  --cream: #FFF8DC;                 /* Cornsilk */
+  --warm-white: #FFFEF7;            /* Warm white */
+  --ivory: #FFFFF0;                 /* Ivory */
+  --champagne: #F7E7CE;             /* Champagne */
+  --beige: #F5F5DC;                 /* Beige */
+  
+  /* Accent Colors */
+  --deep-burgundy: #800020;         /* Deep burgundy for elegance */
+  --forest-green: #355E3B;          /* Forest green for trust */
+  --emerald: #50C878;               /* Emerald green */
+  --ruby: #E0115F;                  /* Ruby red */
+  
+  /* Modern Neutrals */
+  --charcoal: #36454F;              /* Charcoal gray */
+  --slate: #708090;                 /* Slate gray */
+  --light-gray: #F5F5F0;            /* Warm light gray */
+  --medium-gray: #8B8680;           /* Warm medium gray */
+  --dark-gray: #2F2F2F;             /* Dark gray */
+  
+  /* Gradients */
+  --gradient-gold: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%);
+  --gradient-bronze: linear-gradient(135deg, var(--bronze) 0%, var(--primary-gold-dark) 100%);
+  --gradient-warm: linear-gradient(135deg, var(--warm-brown) 0%, var(--rich-brown) 100%);
+  --gradient-elegant: linear-gradient(135deg, var(--deep-burgundy) 0%, var(--mahogany) 100%);
+  --gradient-earth: linear-gradient(135deg, var(--light-brown) 0%, var(--warm-brown) 100%);
+  --gradient-cream: linear-gradient(135deg, var(--cream) 0%, var(--champagne) 100%);
+  
+  /* Legacy Bootstrap mappings for compatibility */
+  --bs-dark-blue: var(--rich-brown);
+  --bs-primary: var(--primary-gold);
+  --bs-warning: var(--secondary-gold);
+  --bs-dark: var(--charcoal);
+  --bs-success: var(--forest-green);
+  --bs-danger: var(--ruby);
+  --bs-info: var(--emerald);
+  
+  /* Shadows with warm tones */
+  --shadow-gold: 0 4px 15px rgba(212, 175, 55, 0.3);
+  --shadow-bronze: 0 4px 15px rgba(205, 127, 50, 0.3);
+  --shadow-warm: 0 4px 15px rgba(139, 69, 19, 0.2);
+  --shadow-elegant: 0 8px 25px rgba(128, 0, 32, 0.3);
+}
+
+/* ===== GLOBAL BACKGROUND UPDATES ===== */
+body {
+  background-color: var(--cream) !important;
+  color: var(--dark-gray) !important;
+}
+
+/* ===== UTILITY CLASSES ===== */
+/* Background Colors */
+.bg-primary-gold { background-color: var(--primary-gold) !important; }
+.bg-secondary-gold { background-color: var(--secondary-gold) !important; }
+.bg-bronze { background-color: var(--bronze) !important; }
+.bg-rich-brown { background-color: var(--rich-brown) !important; }
+.bg-warm-brown { background-color: var(--warm-brown) !important; }
+.bg-cream { background-color: var(--cream) !important; }
+.bg-champagne { background-color: var(--champagne) !important; }
+.bg-deep-burgundy { background-color: var(--deep-burgundy) !important; }
+.bg-forest-green { background-color: var(--forest-green) !important; }
+
+/* Gradient Backgrounds */
+.bg-gradient-gold { background: var(--gradient-gold) !important; }
+.bg-gradient-bronze { background: var(--gradient-bronze) !important; }
+.bg-gradient-warm { background: var(--gradient-warm) !important; }
+.bg-gradient-elegant { background: var(--gradient-elegant) !important; }
+.bg-gradient-earth { background: var(--gradient-earth) !important; }
+.bg-gradient-cream { background: var(--gradient-cream) !important; }
+
+/* Text Colors */
+.text-primary-gold { color: var(--primary-gold) !important; }
+.text-secondary-gold { color: var(--secondary-gold) !important; }
+.text-bronze { color: var(--bronze) !important; }
+.text-rich-brown { color: var(--rich-brown) !important; }
+.text-warm-brown { color: var(--warm-brown) !important; }
+.text-deep-burgundy { color: var(--deep-burgundy) !important; }
+.text-forest-green { color: var(--forest-green) !important; }
+.text-charcoal { color: var(--charcoal) !important; }
+
+/* ===== COMPONENT OVERRIDES ===== */
+
+/* Navigation Updates */
+.main-navigation {
+  background: var(--gradient-warm) !important;
+}
+
+.navbar-brand {
+  color: var(--secondary-gold) !important;
+}
+
+.nav-link {
+  color: var(--warm-white) !important;
+}
+
+.nav-link:hover {
+  background: rgba(255, 215, 0, 0.2) !important;
+  color: var(--secondary-gold) !important;
+}
+
+.nav-link.active {
+  background: var(--secondary-gold) !important;
+  color: var(--rich-brown) !important;
+}
+
+/* Button Updates */
+.btn-primary {
+  background: var(--gradient-gold) !important;
+  border: none !important;
+  color: var(--charcoal) !important;
+  font-weight: 600 !important;
+}
+
+.btn-primary:hover {
+  background: var(--gradient-bronze) !important;
+  color: var(--warm-white) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-warning {
+  background: var(--gradient-gold) !important;
+  border: none !important;
+  color: var(--charcoal) !important;
+  font-weight: 700 !important;
+}
+
+.btn-warning:hover {
+  background: var(--primary-gold-dark) !important;
+  color: var(--warm-white) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-bronze);
+}
+
+.btn-success {
+  background: var(--gradient-earth) !important;
+  border: none !important;
+  color: var(--warm-white) !important;
+}
+
+.btn-success:hover {
+  background: var(--forest-green) !important;
+  transform: translateY(-2px);
+}
+
+/* Hero Section Updates */
+.hero-sell-gold,
+.hero-sell-gold-updated {
+  background: var(--primary-gold-light) !important; /* Light gold background */
+}
+
+.hero-sell-gold-updated::before {
+  background: transparent !important; /* Remove overlay to show light yellow background */
+}
+
+/* Section Backgrounds */
+#how-it-works {
+  background: var(--gradient-warm) !important;
+}
+
+#testimonials {
+  background: var(--gradient-cream) !important;
+}
+
+#recent-posts {
+  background: var(--gradient-cream) !important;
+}
+
+/* Card Updates */
+.card {
+  background: var(--warm-white) !important;
+  border: 1px solid var(--champagne) !important;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-gold) !important;
+}
+
+.card-header {
+  background: var(--gradient-gold) !important;
+  color: var(--charcoal) !important;
+}
+
+/* How It Works Steps */
+.how-it-works-step {
+  background: rgba(255, 248, 220, 0.2) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+}
+
+.how-it-works-step:hover {
+  background: rgba(255, 248, 220, 0.4) !important;
+  box-shadow: var(--shadow-gold) !important;
+}
+
+.step-icon {
+  color: var(--secondary-gold) !important;
+  border-color: var(--secondary-gold) !important;
+}
+
+.step-number {
+  color: var(--secondary-gold) !important;
+}
+
+/* Comparison Cards */
+.comparison-card:hover {
+  box-shadow: var(--shadow-bronze) !important;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+  background: var(--warm-white) !important;
+  border: 1px solid var(--champagne) !important;
+}
+
+.testimonial-card:hover {
+  box-shadow: var(--shadow-elegant) !important;
+}
+
+.stars i {
+  color: var(--secondary-gold) !important;
+}
+
+/* Footer Updates */
+footer {
+  background: var(--primary-gold-light) !important;
+  color: var(--charcoal) !important;
+}
+
+.footer-enhanced {
+  background: var(--primary-gold-light) !important;
+}
+
+.footer-heading {
+  color: var(--charcoal) !important;
+}
+
+.footer-links a:hover {
+  color: var(--secondary-gold) !important;
+}
+
+.social-links a:hover {
+  background: var(--secondary-gold) !important;
+  color: var(--deep-burgundy) !important;
+}
+
+/* Modal Updates */
+#getInTouchModal .modal-header {
+  background: var(--gradient-warm) !important;
+}
+
+#getInTouchModal .modal-body {
+  background: var(--gradient-cream) !important;
+}
+
+#getInTouchModal .form-label {
+  color: var(--rich-brown) !important;
+}
+
+#getInTouchModal .form-control:focus,
+#getInTouchModal .form-select:focus {
+  border-color: var(--primary-gold) !important;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25) !important;
+}
+
+/* Top Bar */
+.top-bar {
+  background: var(--rich-brown) !important;
+}
+
+/* Page Headers */
+.page-header {
+  background: #fff9c4 !important; /* Light yellow background */
+}
+
+/* Section Heading Underlines */
+h2.display-5::after {
+  background: var(--gradient-gold) !important;
+}
+
+section h2::after {
+  background: var(--gradient-gold) !important;
+}
+
+/* Form Styling */
+.contact-section form {
+  background: var(--warm-white) !important;
+  border: 1px solid var(--champagne) !important;
+}
+
+/* Blog Cards */
+.blog-post-card,
+.blog-preview-card {
+  background: var(--warm-white) !important;
+  border: 1px solid var(--champagne) !important;
+}
+
+.blog-post-card:hover,
+.blog-preview-card:hover {
+  box-shadow: var(--shadow-gold) !important;
+}
+
+/* Service Cards */
+.service-card {
+  background: rgba(255, 248, 220, 0.2) !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+}
+
+.service-card:hover {
+  background: rgba(255, 248, 220, 0.4) !important;
+  box-shadow: var(--shadow-bronze) !important;
+}
+
+.service-card i {
+  color: var(--secondary-gold) !important;
+}
+
+/* Branch Cards */
+.branch-card {
+  background: var(--warm-white) !important;
+  border: 1px solid var(--champagne) !important;
+}
+
+.branch-card:hover {
+  box-shadow: var(--shadow-gold) !important;
+}
+
+/* Album Photo Cards */
+.album-photo-card:hover {
+  box-shadow: var(--shadow-elegant) !important;
+}
+
+/* Why Choose Us Items */
+.why-choose-item {
+  border: 1px solid var(--champagne) !important;
+  background: var(--warm-white) !important;
+}
+
+.why-choose-item:hover {
+  box-shadow: var(--shadow-gold) !important;
+}
+
+/* Feature Boxes */
+.feature-box:hover i {
+  color: var(--secondary-gold) !important;
+}
+
+/* Accordion (FAQ) */
+#faq .accordion-button {
+  background: var(--champagne) !important;
+  color: var(--charcoal) !important;
+}
+
+#faq .accordion-button:not(.collapsed) {
+  background: var(--secondary-gold) !important;
+  color: var(--charcoal) !important;
+}
+
+#faq .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25) !important;
+}
+
+#faq .accordion-body {
+  background: var(--warm-white) !important;
+  color: var(--charcoal) !important;
+}
+
+/* Pagination */
+.pagination .page-link {
+  color: var(--primary-gold) !important;
+  border-color: var(--champagne) !important;
+}
+
+.pagination .page-item.active .page-link {
+  background: var(--primary-gold) !important;
+  border-color: var(--primary-gold) !important;
+  color: var(--charcoal) !important;
+}
+
+.pagination .page-link:hover {
+  color: var(--charcoal) !important;
+  background: var(--primary-gold) !important;
+  border-color: var(--primary-gold) !important;
+}
+
+/* Video Section */
+#video-section {
+  background: var(--light-gray) !important;
+}
+
+.video-container:hover {
+  box-shadow: var(--shadow-elegant) !important;
+}
+
+/* Enhanced Floating Dock */
+.floating-dock-item:hover {
+  background: var(--secondary-gold) !important;
+  color: var(--rich-brown) !important;
+}
+
+/* Custom Notifications */
+.custom-notification.alert-success {
+  background: linear-gradient(135deg, #d4edda, #c3e6cb) !important;
+  border-left: 4px solid var(--forest-green) !important;
+}
+
+.custom-notification.alert-danger {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb) !important;
+  border-left: 4px solid var(--ruby) !important;
+}
+
+/* Focus States for Accessibility */
+.btn:focus,
+.nav-link:focus,
+.form-control:focus {
+  outline: 2px solid var(--secondary-gold) !important;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .hero-sell-gold-updated {
+    background: var(--warm-white) !important;
+    color: var(--charcoal) !important;
+  }
+}

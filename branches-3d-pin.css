@@ -1,0 +1,223 @@
+/* 3D Pin Container Styles */
+.branches-container {
+    min-height: 40rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.pin-container {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem auto;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pin-container::before {
+    content: attr(data-title);
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(242, 222, 39, 0.8);
+    color:black;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.pin-container:hover::before {
+    opacity: 1;
+}
+
+.pin-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 38, 228, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.pin-container:hover .pin-card {
+    transform: rotateX(15deg) rotateY(15deg) translateZ(50px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.pin-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color:  white;
+    margin: 0 0 1rem 0;
+    padding-bottom: 0.5rem;
+    z-index: 2;
+    position: relative;
+}
+
+.pin-content {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    z-index: 2;
+    position: relative;
+    flex: 1;
+}
+
+.pin-description {
+    color:black;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+}
+
+.pin-map-container {
+    margin-bottom: 0.75rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.pin-container:hover .pin-map-container {
+    transform: translateZ(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pin-map-container iframe {
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.pin-container:hover .pin-map-container iframe {
+    transform: scale(1.02);
+}
+
+.pin-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(135deg, #e3e2e6 0%, #e6e3e8 35%, #f7f8fa 100%);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.pin-container:hover .pin-gradient {
+    opacity: 1;
+    transform: translateZ(20px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pin-container {
+        width: 18rem;
+        height: 18rem;
+        margin: 1.5rem auto;
+    }
+    
+    .branches-container {
+        min-height: 30rem;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .pin-container {
+        width: 16rem;
+        height: 16rem;
+        margin: 1rem auto;
+    }
+    
+    .pin-card {
+        padding: 1rem;
+    }
+    
+    .pin-title {
+        font-size: 0.9rem;
+    }
+    
+    .pin-content {
+        font-size: 0.875rem;
+    }
+}
+
+/* Animation keyframes */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.pin-container:hover {
+    animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hero section styles */
+.hero-section {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+/* Contact section enhancements */
+.bg-dark-blue {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 100%) !important;
+}
+
+/* Button hover effects */
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(251, 191, 36, 0.3);
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}

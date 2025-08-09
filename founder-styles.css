@@ -1,0 +1,28 @@
+/* Founder Image Styles */
+.founder-image {
+  width: 200px !important;
+  height: 200px !important;
+  object-fit:fill;
+  border: 3px solid #f8f9fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive founder image sizes */
+@media (max-width: 768px) {
+  .founder-image {
+    width: 100px !important;
+    height: 100px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .founder-image {
+    width: 80px !important;
+    height: 80px !important;
+  }
+}

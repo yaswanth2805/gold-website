@@ -1,0 +1,48 @@
+/* Footer Alignment Fixes */
+
+/* Desktop: Quick Links justify to start */
+@media (min-width: 992px) {
+    .footer-quick-links .d-flex {
+        justify-content: flex-start !important;
+    }
+}
+
+/* Mobile: Both Quick Links and Follow Us justify to start */
+@media (max-width: 991.98px) {
+    .footer-quick-links .d-flex {
+        justify-content: flex-start !important;
+    }
+    
+    .footer-follow-us ul {
+        text-align: left !important;
+        padding-left: 0 !important;
+    }
+    
+    .footer-follow-us {
+        text-align: left !important;
+    }
+    
+    /* Ensure all footer sections align to start on mobile */
+    footer .col-lg-3,
+    footer .col-lg-4,
+    footer .col-lg-2 {
+        text-align: left !important;
+    }
+    
+    footer .col-lg-3 h5,
+    footer .col-lg-4 h5,
+    footer .col-lg-2 h5 {
+        text-align: left !important;
+    }
+}
+
+/* Additional mobile improvements */
+@media (max-width: 767.98px) {
+    footer .container .row > div {
+        margin-bottom: 2rem;
+    }
+    
+    footer .container .row > div:last-child {
+        margin-bottom: 1rem;
+    }
+}

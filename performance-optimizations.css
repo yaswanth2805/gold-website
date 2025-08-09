@@ -1,0 +1,463 @@
+/* Performance Optimizations for SRISTAR GOLD COMPANY */
+
+/* ===== CRITICAL RENDERING PATH OPTIMIZATIONS ===== */
+
+/* Prevent layout shifts */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Optimize font loading */
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+}
+
+/* ===== GPU ACCELERATION ===== */
+.hero-sell-gold-updated,
+.testimonial-card,
+.comparison-card-new,
+.floating-dock-item,
+.how-it-works-step,
+.navbar {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* ===== SMOOTH SCROLLING OPTIMIZATIONS ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ===== INTERSECTION OBSERVER ANIMATIONS ===== */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ===== LAZY LOADING OPTIMIZATIONS ===== */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Placeholder for lazy images */
+.img-placeholder {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* ===== CRITICAL CSS INLINING ===== */
+/* Above-the-fold styles */
+.hero-sell-gold-updated {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+/* ===== RESOURCE HINTS OPTIMIZATION ===== */
+/* Preload critical resources */
+.preload-hint::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    background: url('images/logo.webp') no-repeat -9999px -9999px;
+    background: url('images/hero-bg.jpg') no-repeat -9999px -9999px;
+}
+
+/* ===== ANIMATION PERFORMANCE ===== */
+/* Use transform and opacity for animations */
+@keyframes optimizedFadeIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes optimizedSlideIn {
+    from {
+        opacity: 0;
+        transform: translate3d(-20px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* ===== REDUCE PAINT AND LAYOUT ===== */
+.contain-layout {
+    contain: layout;
+}
+
+.contain-paint {
+    contain: paint;
+}
+
+.contain-strict {
+    contain: strict;
+}
+
+/* ===== OPTIMIZE BACKDROP FILTERS ===== */
+.backdrop-blur-optimized {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(10px)) {
+    .backdrop-blur-optimized {
+        background: rgba(255, 255, 255, 0.9);
+    }
+}
+
+/* ===== CRITICAL LOADING STATES ===== */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* ===== OPTIMIZE SHADOWS ===== */
+.optimized-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.optimized-shadow-lg {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== REDUCE REFLOWS ===== */
+.no-reflow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== OPTIMIZE GRADIENTS ===== */
+.optimized-gradient {
+    background: linear-gradient(135deg, #1a365d, #2d5a87);
+}
+
+/* ===== PERFORMANCE MONITORING ===== */
+.perf-mark {
+    position: relative;
+}
+
+.perf-mark::after {
+    content: attr(data-perf);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    font-size: 10px;
+    color: #ff0000;
+    background: #ffffff;
+    padding: 2px 4px;
+    border-radius: 2px;
+    display: none;
+}
+
+.debug .perf-mark::after {
+    display: block;
+}
+
+/* ===== MOBILE PERFORMANCE ===== */
+@media (max-width: 768px) {
+    /* Reduce animations on mobile */
+    .reduce-motion {
+        animation-duration: 0.1s !important;
+        transition-duration: 0.1s !important;
+    }
+    
+    /* Optimize touch targets */
+    .touch-target {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Reduce blur effects on mobile */
+    .backdrop-blur-optimized {
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+}
+
+/* ===== PRINT OPTIMIZATIONS ===== */
+@media print {
+    /* Remove unnecessary elements */
+    .no-print,
+    .navbar,
+    .floating-dock,
+    .modal,
+    .btn,
+    video,
+    .hero-background-video {
+        display: none !important;
+    }
+    
+    /* Optimize colors for print */
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    /* Ensure readable font sizes */
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    h1 { font-size: 18pt; }
+    h2 { font-size: 16pt; }
+    h3 { font-size: 14pt; }
+    
+    /* Page breaks */
+    .page-break {
+        page-break-before: always;
+    }
+    
+    .no-break {
+        page-break-inside: avoid;
+    }
+}
+
+/* ===== ACCESSIBILITY PERFORMANCE ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ===== NETWORK OPTIMIZATION ===== */
+/* Optimize for slow connections */
+@media (max-width: 768px) and (max-resolution: 150dpi) {
+    .high-res-only {
+        display: none;
+    }
+}
+
+/* ===== MEMORY OPTIMIZATION ===== */
+.memory-efficient {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* ===== BATTERY OPTIMIZATION ===== */
+@media (prefers-reduced-motion: reduce), (update: slow) {
+    .battery-efficient {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* ===== CRITICAL RESOURCE LOADING ===== */
+.critical-resource {
+    font-display: swap;
+    loading: eager;
+}
+
+.non-critical-resource {
+    font-display: optional;
+    loading: lazy;
+}
+
+/* ===== LAYOUT STABILITY ===== */
+.stable-layout {
+    min-height: 200px; /* Prevent layout shift */
+    contain: layout style;
+}
+
+/* ===== OPTIMIZE TRANSFORMS ===== */
+.gpu-optimized {
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* ===== REDUCE PAINT COMPLEXITY ===== */
+.simple-paint {
+    border-radius: 0;
+    box-shadow: none;
+    background: solid;
+}
+
+/* ===== OPTIMIZE FILTERS ===== */
+.optimized-filter {
+    filter: brightness(1.1) contrast(1.05);
+}
+
+/* Avoid expensive filters on mobile */
+@media (max-width: 768px) {
+    .expensive-filter {
+        filter: none;
+    }
+}
+
+/* ===== PERFORMANCE UTILITIES ===== */
+.will-change-transform {
+    will-change: transform;
+}
+
+.will-change-opacity {
+    will-change: opacity;
+}
+
+.will-change-auto {
+    will-change: auto;
+}
+
+/* ===== LOADING PERFORMANCE ===== */
+.defer-load {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.defer-load.loaded {
+    opacity: 1;
+}
+
+/* ===== CRITICAL PATH CSS ===== */
+/* Only include essential styles for above-the-fold content */
+.critical-path {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* ===== RESOURCE PRIORITIZATION ===== */
+.high-priority {
+    importance: high;
+}
+
+.low-priority {
+    importance: low;
+}
+
+/* ===== PERFORMANCE DEBUGGING ===== */
+.debug-performance * {
+    outline: 1px solid red;
+}
+
+.debug-performance *:hover {
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* ===== OPTIMIZE FOR CORE WEB VITALS ===== */
+/* Largest Contentful Paint (LCP) optimization */
+.lcp-element {
+    font-display: swap;
+    loading: eager;
+    fetchpriority: high;
+}
+
+/* First Input Delay (FID) optimization */
+.fid-optimized {
+    pointer-events: auto;
+    touch-action: manipulation;
+}
+
+/* Cumulative Layout Shift (CLS) optimization */
+.cls-stable {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+}

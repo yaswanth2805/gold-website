@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRISTAR GOLD COMPANY - Mobile Van</title>
+    <!-- Bootstrap CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="performance-optimizations.css">
+    
+    <!-- Gold Company Color Scheme -->
+    <link rel="stylesheet" href="gold-company-colors.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- OFFICIAL GOLD COMPANY THEME - MASTER OVERRIDE (Load absolutely last) -->
+    <link rel="stylesheet" href="official-gold-company-theme.css">
+    <!-- Navigation Layout Fix - Single Line & Light Colors (Load absolutely last) -->
+    <link rel="stylesheet" href="navigation-layout-fix.css">
+    
+    <style>
+        /* Mobile Van Steps Text Color Fix */
+        .how-it-works-step .step-number,
+        .how-it-works-step .step-title,
+        .how-it-works-step .step-description {
+            color: #000000 !important;
+        }
+        
+        /* Ensure the section background is light for contrast */
+        .py-5.bg-dark-blue {
+            background-color: #f8f9fa !important;
+        }
+        
+        /* Update section title color for contrast */
+        .py-5.bg-dark-blue h2 {
+            color: #333333 !important;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Top Bar -->
+      <div class="top-bar bg-dark-blue text-white py-2 d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-info">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                    </svg></i>+91 63 66 333 444</span>
+                <span class="ms-4"><i class="fas fa-map-marker-alt me-2"></i>#280/1, Anniamma Arcade, 2nd Floor, Sampige
+                    Road, 18th Cross signal, Malleshwaram, Bangalore - 560003</span>
+            </div>
+            <div class="d-flex align-items-center">
+                
+                <span class="me-3">FOLLOW US:</span>
+                <a href="https://www.facebook.com/sristargold" class="text-white me-2"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/sristargoldmall?s=21" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/YOUR_YOUTUBE_CHANNEL_ID" class="text-white"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navigation sticky-top">
+        <div class="container">
+            <!-- Brand/Logo -->
+          
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">
+                            <i class="fas fa-info-circle me-1"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="branches.html">
+                            <i class="fas fa-map-marker-alt me-1"></i>Branches
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">
+                            <i class="fas fa-cogs me-1"></i>Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="album.html">
+                            <i class="fas fa-images me-1"></i>Album
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">
+                            <i class="fas fa-blog me-1"></i>Blogs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i>Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header text-dark text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">SRISTAR Gold Mobile Van</h1>
+            <p class="lead">Your trusted gold buying service, now at your doorstep!</p>
+        </div>
+    </section>
+
+    <!-- Mobile Van Introduction Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://placehold.co/600x400/007bff/FFFFFF?text=Mobile+Van" class="img-fluid rounded shadow-lg" alt="SRISTAR Gold Mobile Van">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">Convenience Redefined: Our Mobile Gold Van</h2>
+                    <p class="lead">
+                        At SRISTAR GOLD COMPANY, we understand your need for convenience and security when selling your precious gold. That's why we've introduced our state-of-the-art Mobile Gold Van service, bringing our trusted and transparent gold buying process directly to your home or preferred location.
+                    </p>
+                    <p>
+                        Our mobile vans are fully equipped with advanced gold testing machinery, including XRF machines, ensuring accurate and on-the-spot purity assessment. All transactions are conducted with complete transparency, and you receive instant cash or bank transfer for your gold.
+                    </p>
+                    <p>
+                        Experience a hassle-free and secure way to sell your gold without stepping out of your comfort zone.
+                    </p>
+                    <a href="contact.html" class="btn btn-warning rounded-pill mt-3">Book a Mobile Van Visit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How Mobile Van Works Section (Similar to homepage, but specific to van) -->
+    <section class="py-5 bg-dark-blue text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold">How Our Mobile Van Works</h2>
+            <div class="row text-center justify-content-center">
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="how-it-works-step">
+                        <div class="step-icon mb-3"><i class="fas fa-calendar-check"></i></div>
+                        <h3 class="step-number">STEP 1</h3>
+                        <p class="step-title">Book an Appointment</p>
+                        <p class="step-description">Schedule a visit online or by calling our toll-free number.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="how-it-works-step">
+                        <div class="step-icon mb-3"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3 class="step-number">STEP 2</h3>
+                        <p class="step-title">Van Arrives</p>
+                        <p class="step-description">Our secure mobile van reaches your specified location at the scheduled time.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="how-it-works-step">
+                        <div class="step-icon mb-3"><i class="fas fa-flask"></i></div>
+                        <h3 class="step-number">STEP 3</h3>
+                        <p class="step-title">On-Spot Valuation</p>
+                        <p class="step-description">Gold is tested and valued using advanced machines in front of you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="how-it-works-step">
+                        <div class="step-icon mb-3"><i class="fas fa-receipt"></i></div>
+                        <h3 class="step-number">STEP 4</h3>
+                        <p class="step-title">Instant Offer</p>
+                        <p class="step-description">Receive a fair and transparent offer based on current market rates.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="how-it-works-step">
+                        <div class="step-icon mb-3"><i class="fas fa-money-bill-wave"></i></div>
+                        <h3 class="step-number">STEP 5</h3>
+                        <p class="step-title">Get Paid Instantly</p>
+                        <p class="step-description">Receive cash or instant bank transfer on the spot.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Ready to Sell Your Gold?</h2>
+            <p class="lead mb-4">Book our Mobile Gold Van service today for a convenient and secure experience.</p>
+            <a href="contact.html" class="btn btn-warning btn-lg rounded-pill shadow-lg">Schedule Your Visit Now!</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-dark-blue text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-3">
+                    <h5>SRISTAR GOLD COMPANY</h5>
+                    <p>Your trusted partner for buying, selling, and investing in gold.</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>#280/1, Anniamma Arcade, 2nd Floor, Sampige Road, 18th Cross signal, Malleshwaram, Bangalore - 560003</p>
+                    <p><i class="fas fa-phone me-2"></i>+91 63 66 333 444</p>
+                    <p><i class="fas fa-envelope me-2"></i>info@sristargoldcompany.com</p>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <h5>Quick Links</h5>
+                    <div class="d-flex justify-content-start">
+                        <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none"><i class="home"></i>Home</a></li>
+                        <li><a href="about.html" class="text-white text-decoration-none"><i class="About"></i>About us</a></li>
+                        <li><a href="branches.html" class="text-white text-decoration-none"><i class="branches"></i>Branches</a></li>                    
+                        <li><a href="album.html" class="text-white text-decoration-none"><i class="ablum"></i>Album</a></li>
+                        <li><a href="blog.html" class="text-white text-decoration-none"><i class="blogs"></i>Blogs</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none"><i class="services"></i>Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none"><i class="Contact Us"></i>Contact Us</a></li>
+                    </ul>                    
+                </div>
+                </div>
+                <div class="col-lg-3 mb-3">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/sristargold" class="text-white text-decoration-none"><i class="fab fa-facebook-f me-2"></i>Facebook</a></li>
+                        <li><a href="https://x.com/sristargoldmall?s=21" class="text-white text-decoration-none"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+                        <li><a href="https://www.youtube.com/embed/0aC7-nrIfAk?si=V3jR5BI1DPyzcWno" class="text-white text-decoration-none"><i class="fab fa-youtube me-2"></i>YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Subscribe</h5>
+                    <p>Subscribe to our newsletter for updates.</p>
+                    <form>
+                        <div class="mb-2">
+                            <input type="email" class="form-control" placeholder="Your email">
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-warning">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 SRISTAR GOLD COMPANY. All rights reserved.</p>
+                <p class="mb-0">Designed with <span class="text-danger">&hearts;</span> by SRISTAR Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,124 @@
+/* Homepage Improvements CSS */
+
+/* 1. Video Section - Remove Colors */
+#video-section {
+    background: #ffffff !important; /* Pure white background */
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #333333 !important; /* Dark text for contrast */
+}
+
+#video-section h2 {
+    color: #333333 !important; /* Dark title */
+    text-shadow: none !important;
+}
+
+#video-section .lead {
+    color: #666666 !important; /* Gray subtitle */
+}
+
+#video-section .btn {
+    background-color: #333333 !important; /* Dark button */
+    background: #333333 !important;
+    border-color: #333333 !important;
+    color: #ffffff !important;
+}
+
+#video-section .btn:hover {
+    background-color: #555555 !important;
+    background: #555555 !important;
+    border-color: #555555 !important;
+}
+
+/* Remove any gradients or patterns from video section */
+#video-section::before,
+#video-section::after {
+    display: none !important;
+}
+
+
+/* 3. Testimonials Section - Color Changes */
+/* Change main title color */
+#testimonials h2,
+#testimonials .display-5 {
+    color: #FFD700 !important; /* Gold color for "Testimonials - Our Customer Stories" */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Change customer names colors - Multiple selectors for better coverage */
+#testimonials .customer-info h5,
+#testimonials .testimonial-card .customer-info h5,
+#testimonials h5.text-warning,
+#testimonials h5.text-blue,
+#testimonials h5.text-dark,
+#testimonials h5.fw-bold {
+    color: #FFD700 !important; /* Gold color for all customer names */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3) !important;
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+}
+
+/* Specific customer name styling for better visibility */
+#testimonials .testimonial-card .customer-info h5.text-warning,
+#testimonials .testimonial-card .customer-info h5.text-blue,
+#testimonials .testimonial-card .customer-info h5.text-dark {
+    color: #FFD700 !important; /* Override all existing colors with gold */
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+}
+
+/* Enhanced testimonial section background for better contrast */
+#testimonials {
+    background: white !important;
+    position: relative !important;
+}
+
+/* Add subtle pattern overlay */
+#testimonials::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 25% 25%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ensure testimonial content is above the overlay */
+#testimonials .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Additional styling for better readability */
+#testimonials .testimonial-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Navigation dots styling */
+#testimonials .testimonial-dots .dot {
+    background-color: rgba(255, 215, 0, 0.5) !important;
+    border: 2px solid #FFD700 !important;
+}
+
+#testimonials .testimonial-dots .dot.active {
+    background-color: #FFD700 !important;
+}
+
+/* Navigation arrows styling */
+#testimonials .testimonial-nav {
+    background-color: rgba(255, 215, 0, 0.8) !important;
+    color: #000000 !important;
+    border: 2px solid #FFD700 !important;
+}
+
+#testimonials .testimonial-nav:hover {
+    background-color: #FFD700 !important;
+    transform: scale(1.1) !important;
+}

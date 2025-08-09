@@ -1,0 +1,313 @@
+/* FAQ Page Specific Styles */
+
+/* Navbar Logo Styles */
+.navbar-logo {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover .navbar-logo {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 35px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-logo {
+        height: 30px;
+    }
+    
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}
+
+/* Page Header Styles */
+.page-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="10" cy="60" r="0.5" fill="rgba(255,255,255,0.05)"/><circle cx="90" cy="40" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+.faq-icon {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* FAQ Category Styles */
+.faq-category {
+    margin-bottom: 3rem;
+}
+
+.category-title {
+    color: #1a1a2e;
+    font-weight: 700;
+    border-bottom: 3px solid #ffc107;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.category-title::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #ffc107, #ff9800);
+    border-radius: 2px;
+}
+
+/* Accordion Enhancements */
+.accordion-item {
+    border: none !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.accordion-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.accordion-button {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%) !important;
+    border: none !important;
+    padding: 1.25rem 1.5rem;
+    font-size: 1.1rem;
+    color: #1a1a2e !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.accordion-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #ffc107, #ff9800);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.accordion-button:hover::before,
+.accordion-button:not(.collapsed)::before {
+    transform: scaleY(1);
+}
+
+.accordion-button:hover {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffffff 100%) !important;
+    color: #1a1a2e !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%) !important;
+    color: #1a1a2e !important;
+    box-shadow: none !important;
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffc107'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+    transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    background: #ffffff;
+    color: #495057;
+    line-height: 1.7;
+    font-size: 1rem;
+    border-top: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+/* Contact Section Styling */
+.bg-light {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+/* Button Enhancements */
+.btn-outline-primary {
+    border-color: #1a1a2e;
+    color: #1a1a2e;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #1a1a2e;
+    border-color: #1a1a2e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(26, 26, 46, 0.3);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+    background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 3rem 0 !important;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .faq-icon {
+        display: none;
+    }
+    
+    .accordion-button {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .accordion-body {
+        padding: 1rem;
+    }
+    
+    .category-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    .accordion-button {
+        font-size: 0.95rem;
+        padding: 0.875rem;
+    }
+    
+    .category-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* Animation for accordion items */
+.accordion-item {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.accordion-item:nth-child(1) { animation-delay: 0.1s; }
+.accordion-item:nth-child(2) { animation-delay: 0.2s; }
+.accordion-item:nth-child(3) { animation-delay: 0.3s; }
+.accordion-item:nth-child(4) { animation-delay: 0.4s; }
+.accordion-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Category title animation */
+.category-title {
+    animation: slideInLeft 0.8s ease forwards;
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Smooth scrolling enhancement */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25) !important;
+    border-color: #ffc107 !important;
+}
+
+/* Print styles */
+@media print {
+    .page-header,
+    .navbar,
+    footer,
+    .btn {
+        display: none !important;
+    }
+    
+    .accordion-collapse {
+        display: block !important;
+    }
+    
+    .accordion-button::after {
+        display: none !important;
+    }
+}

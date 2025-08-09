@@ -1,0 +1,307 @@
+/* ===================================================================== */
+/* NAVIGATION LAYOUT FIX - Single Line Navigation & Light Header/Footer */
+/* ===================================================================== */
+
+/* ===== NAVIGATION BAR - SINGLE LINE LAYOUT ===== */
+.main-navigation,
+.navbar {
+    background: #F5DEB3 !important; /* Light gold background */
+    box-shadow: 0 2px 10px rgb(241, 208, 22) !important;
+    border-bottom: 2px solid #DEB887 !important;
+    padding: 8px 0 !important; /* Reduced padding for compact layout */
+    min-height: auto !important;
+}
+
+/* Brand/Logo - Compact styling */
+.navbar-brand {
+    color: #8B4513 !important; /* Dark brown text for contrast */
+    font-weight: 700 !important;
+    font-size: 1.4rem !important; /* Slightly smaller font */
+    white-space: nowrap !important; /* Prevent text wrapping */
+    margin-right: 1rem !important;
+    padding: 0.25rem 0 !important; /* Reduced padding */
+}
+
+.navbar-brand img {
+    height: 50px !important; /* Smaller logo height */
+    width: auto !important;
+}
+
+.brand-text {
+    font-size: 1.2rem !important; /* Smaller brand text */
+    letter-spacing: 0.5px !important;
+}
+
+/* Navigation Links - Compact single line layout */
+.navbar-nav {
+    flex-direction: row !important; /* Force horizontal layout */
+    flex-wrap: nowrap !important; /* Prevent wrapping */
+    gap: 0.25rem !important;
+}
+
+.navbar-nav .nav-item {
+    flex-shrink: 0 !important; /* Prevent items from shrinking */
+}
+
+.navbar-nav .nav-link {
+    color: black !important; /* Dark brown text */
+    font-weight: 500 !important;
+    font-size: 0.85rem !important; /* Smaller font size */
+    padding: 0.5rem 0.75rem !important; /* Compact padding */
+    margin: 0 0.125rem !important;
+    border-radius: 20px !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important; /* Prevent text wrapping */
+    text-transform: none !important; /* Remove uppercase */
+    letter-spacing: normal !important;
+}
+
+.navbar-nav .nav-link:hover {
+    background: #DEB887 !important; /* Darker gold hover */
+    color: #654321 !important; /* Darker brown text on hover */
+    transform: translateY(-1px) !important;
+}
+
+.navbar-nav .nav-link.active {
+    background: #CD853F !important; /* Medium gold for active */
+    color: #ffffff !important; /* White text for active */
+}
+
+/* Container adjustments for better space utilization */
+.navbar .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background: black !important;
+    border: 1px solid black !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.dropdown-item {
+    color: #495057 !important;
+    font-size: 0.875rem !important;
+}
+
+.dropdown-item:hover {
+    background: black !important;
+    color: #212529 !important;
+}
+
+/* Mobile toggle button */
+.navbar-toggler {
+    border: 1px solid #6c757d !important;
+    padding: 0.25rem 0.5rem !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2873, 80, 87, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* ===== HEADER (TOP BAR) - LIGHT GOLD COLOR ===== */
+.top-bar {
+    background: #F5DEB3 !important; /* Light gold background */
+    color: #8B4513 !important; /* Dark brown text */
+    border-bottom: 1px solid #DEB887 !important;
+    padding: 10px 0 !important;
+}
+
+.top-bar .contact-info span,
+.top-bar a {
+    color: #8B4513 !important;
+    transition: color 0.3s ease !important;
+}
+
+.top-bar .contact-info span:hover,
+.top-bar a:hover {
+    color: #654321 !important; /* Darker brown on hover */
+}
+
+.top-bar svg,
+.top-bar i {
+    color: #CD853F !important; /* Medium gold for icons */
+}
+
+/* ===== FOOTER - LIGHT GOLD COLOR WITH BLACK TEXT ===== */
+footer,
+.footer {
+    background: #F5DEB3 !important; /* Light gold background same as header */
+    color: black !important; /* Black text */
+    border-top: 2px solid #DEB887 !important;
+}
+
+footer h5,
+.footer h5 {
+    color:black !important; /* Black headings */
+    font-weight: 600 !important;
+}
+
+footer a,
+.footer a {
+    color:black !important; /* Black links */
+    transition: color 0.3s ease !important;
+}
+
+footer a:hover,
+.footer a:hover {
+    color: goldenrod !important; /* Dark gray on hover */
+    text-decoration: none !important;
+}
+
+footer .btn-warning {
+    background: #CD853F !important; /* Gold button */
+    border-color: #CD853F !important;
+    color: black !important;
+}
+
+footer .btn-warning:hover {
+    background: #B8860B !important; /* Darker gold on hover */
+    border-color: #B8860B !important;
+}
+
+/* Additional footer text and icon styling */
+footer p,
+.footer p,
+footer span,
+.footer span,
+footer i,
+.footer i,
+footer .fas,
+.footer .fas,
+footer .fab,
+.footer .fab {
+    color:black !important; /* Black color for all footer text and icons */
+}
+
+footer .text-white,
+.footer .text-white {
+    color: black !important; /* Override any white text classes in footer */
+}
+
+/* Footer background override for any specific classes */
+footer.bg-black,
+.footer.bg-black,
+footer.bg-dark,
+.footer.bg-dark {
+    background: var(--primary-gold-light) !important; /* Force light gold background */
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 1199.98px) {
+    .navbar-brand {
+        font-size: 1.2rem !important;
+    }
+    
+    .brand-text {
+        font-size: 1rem !important;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 0.8rem !important;
+        padding: 0.4rem 0.6rem !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    /* Mobile navigation - stack vertically when collapsed */
+    .navbar-collapse .navbar-nav {
+        flex-direction: column !important;
+        background: #ffffff !important;
+        border-radius: 8px !important;
+        padding: 1rem !important;
+        margin-top: 0.5rem !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    }
+    
+    .navbar-collapse .navbar-nav .nav-link {
+        text-align: center !important;
+        margin: 0.25rem 0 !important;
+        padding: 0.75rem 1rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        font-size: 1.1rem !important;
+    }
+    
+    .brand-text {
+        font-size: 0.9rem !important;
+    }
+    
+    .navbar-brand img {
+        height: 40px !important;
+    }
+}
+
+/* ===== FORCE SINGLE LINE LAYOUT ===== */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important; /* Allow horizontal scroll if needed */
+        overflow-y: hidden !important;
+    }
+    
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto !important;
+        justify-content: flex-end !important;
+    }
+}
+
+/* Remove any animations that might cause layout issues */
+.navbar-nav .nav-link::before,
+.navbar-nav .nav-link::after,
+.navbar-brand::before,
+.navbar-brand::after {
+    display: none !important;
+}
+
+/* Ensure no transforms that might affect layout */
+.navbar-nav .nav-link:hover,
+.navbar-brand:hover {
+    transform: none !important;
+}
+
+/* ===== HOW IT WORKS SECTION - TEXT COLOR CHANGES ===== */
+#how-it-works {
+    background: #f8f9fa !important; /* Light background for better contrast */
+}
+
+#how-it-works h2 {
+    color: #8B4513 !important; /* Dark brown for main heading */
+}
+
+#how-it-works .step-number {
+    color: #CD853F !important; /* Gold color for step numbers */
+}
+
+#how-it-works .step-title {
+    color: #8B4513 !important; /* Dark brown for step titles */
+}
+
+#how-it-works .step-description {
+    color: #333333 !important; /* Dark gray for descriptions */
+}
+
+.how-it-works-step {
+    background: #ffffff !important; /* White background for step cards */
+    border-radius: 10px !important;
+    padding: 1.5rem !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease !important;
+}
+
+.how-it-works-step:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.how-it-works-step .step-icon i {
+    font-size: 2.5rem !important;
+    color: #CD853F !important; /* Gold color for icons */
+}

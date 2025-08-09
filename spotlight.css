@@ -1,0 +1,114 @@
+/* Card Spotlight Effect */
+.card-spotlight {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 24rem;
+  width: 24rem;
+}
+
+.card-spotlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(59, 130, 246, 0.05) 40%,
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-spotlight:hover::before {
+  opacity: 1;
+}
+
+.card-spotlight-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  height: 100%;
+  color: white;
+}
+
+.card-spotlight-content .text-neutral-200 {
+  color: #e5e7eb !important;
+}
+
+.card-spotlight-content .text-neutral-300 {
+  color: #d1d5db !important;
+}
+
+.card-spotlight-content .text-sm {
+  font-size: 0.875rem;
+}
+
+.card-spotlight .check-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #3b82f6;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.card-spotlight .step-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.card-spotlight .step-item:last-child {
+  margin-bottom: 0;
+}
+
+.testimonial-spotlight {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.testimonial-spotlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 193, 7, 0.15) 0%,
+    rgba(255, 193, 7, 0.05) 40%,
+    transparent 80%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.testimonial-spotlight:hover::before {
+  opacity: 1;
+}
+
+.testimonial-spotlight .testimonial-content {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-spotlight .stars {
+  color: #ffc107 !important;
+}

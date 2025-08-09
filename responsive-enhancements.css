@@ -1,0 +1,560 @@
+/* SRISTAR GOLD COMPANY - Comprehensive Responsive Enhancements */
+/* Ensures perfect responsiveness across all devices */
+
+/* ===== MOBILE FIRST APPROACH ===== */
+
+/* Extra Small devices (phones, 320px and up) */
+@media (max-width: 575.98px) {
+  /* Header & Navigation */
+  .top-bar {
+    padding: 0.5rem 0 !important;
+    font-size: 0.75rem;
+  }
+  
+  .top-bar .contact-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .top-bar .contact-info span {
+    font-size: 0.7rem;
+    margin: 0 !important;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem !important;
+    letter-spacing: 0.5px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 0.8rem !important;
+    padding: 0.5rem 1rem !important;
+    margin: 0.1rem 0;
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 2rem 0 !important;
+    min-height: 60vh !important;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.8rem !important;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.2rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 0.9rem !important;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Buttons */
+  .btn {
+    font-size: 0.85rem !important;
+    padding: 0.6rem 1.2rem !important;
+    margin: 0.25rem;
+  }
+  
+  .btn-lg {
+    font-size: 0.9rem !important;
+    padding: 0.75rem 1.5rem !important;
+  }
+  
+  /* Cards */
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  .card-title {
+    font-size: 1.1rem !important;
+  }
+  
+  .card-text {
+    font-size: 0.85rem !important;
+  }
+  
+  /* Modal */
+  .modal-dialog {
+    margin: 0.5rem !important;
+  }
+  
+  .modal-body {
+    padding: 1rem !important;
+  }
+  
+  .modal-title {
+    font-size: 1.1rem !important;
+  }
+  
+  /* Forms */
+  .form-control,
+  .form-select {
+    font-size: 0.9rem !important;
+    padding: 0.6rem 0.8rem !important;
+  }
+  
+  .form-label {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.3rem;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 2rem 0 1rem !important;
+    text-align: center;
+  }
+  
+  footer h5 {
+    font-size: 1rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  footer p,
+  footer a {
+    font-size: 0.8rem !important;
+  }
+  
+  /* Floating Dock */
+  .floating-dock {
+    padding: 0.5rem !important;
+    gap: 0.25rem !important;
+  }
+  
+  .floating-dock-item {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+  
+  .floating-dock-item i {
+    font-size: 0.9rem !important;
+  }
+  
+  /* Gold Price Ticker */
+  .gold-price-container {
+    flex-direction: column !important;
+    gap: 0.5rem;
+  }
+  
+  .price-item {
+    width: 100% !important;
+    max-width: 280px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  
+  /* Testimonials */
+  .testimonial-card {
+    padding: 1rem !important;
+  }
+  
+  .testimonial-avatar img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  /* Comparison Section */
+  .comparison-card-new {
+    margin-bottom: 1.5rem;
+  }
+  
+  .comparison-item {
+    padding: 0.75rem !important;
+  }
+  
+  .icon-wrapper {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .top-bar {
+    font-size: 0.8rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.4rem !important;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.2rem !important;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.4rem !important;
+  }
+  
+  .card-columns {
+    column-count: 2;
+  }
+  
+  .modal-dialog {
+    max-width: 90% !important;
+  }
+  
+  .price-item {
+    max-width: 320px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .top-bar {
+    font-size: 0.85rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.6rem !important;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.6rem !important;
+  }
+  
+  .card-columns {
+    column-count: 2;
+  }
+  
+  .modal-dialog {
+    max-width: 80% !important;
+  }
+  
+  /* Navigation adjustments for tablets */
+  .navbar-nav .nav-link {
+    font-size: 0.75rem !important;
+    padding: 0.6rem 1rem !important;
+  }
+  
+  /* Better spacing for tablet view */
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  /* Testimonials for tablets */
+  .testimonial-card {
+    padding: 1.5rem !important;
+  }
+  
+  .testimonial-avatar img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  /* Gold price ticker for tablets */
+  .gold-price-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .price-item {
+    flex: 0 1 calc(50% - 0.5rem);
+    max-width: none;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-brand {
+    font-size: 1.7rem !important;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem !important;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.8rem !important;
+  }
+  
+  .card-columns {
+    column-count: 3;
+  }
+  
+  .modal-dialog {
+    max-width: 70% !important;
+  }
+  
+  /* Better navigation spacing */
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1.2rem !important;
+  }
+  
+  /* Optimized container width */
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .navbar-brand {
+    font-size: 1.8rem !important;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.5rem !important;
+  }
+  
+  .hero-text h2 {
+    font-size: 2rem !important;
+  }
+  
+  .card-columns {
+    column-count: 4;
+  }
+  
+  .modal-dialog {
+    max-width: 60% !important;
+  }
+  
+  /* Full desktop navigation */
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1.25rem !important;
+  }
+  
+  /* Optimized large screen layout */
+  .container {
+    max-width: 1140px;
+  }
+  
+  /* Enhanced hover effects for desktop */
+  .card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .btn:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* ===== LANDSCAPE ORIENTATION FIXES ===== */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero-section {
+    min-height: 80vh !important;
+    padding: 1rem 0 !important;
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem !important;
+  }
+  
+  .hero-text h2 {
+    font-size: 1.3rem !important;
+  }
+  
+  .modal-dialog {
+    margin: 0.5rem !important;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATIONS ===== */
+@media (hover: none) and (pointer: coarse) {
+  /* Larger touch targets */
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .floating-dock-item {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  
+  /* Remove hover effects on touch devices */
+  .card:hover,
+  .btn:hover,
+  .nav-link:hover {
+    transform: none;
+  }
+  
+  /* Better spacing for touch */
+  .form-control,
+  .form-select {
+    min-height: 44px;
+  }
+}
+
+/* ===== HIGH DPI DISPLAYS ===== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper text rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Crisper borders */
+  .card,
+  .btn,
+  .form-control {
+    border-width: 0.5px;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  /* Hide non-essential elements */
+  .navbar,
+  .floating-dock,
+  .btn,
+  .modal,
+  .top-bar {
+    display: none !important;
+  }
+  
+  /* Optimize for print */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .container {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: black !important;
+    page-break-after: avoid;
+  }
+  
+  .card {
+    border: 1px solid #ccc !important;
+    page-break-inside: avoid;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ===== ACCESSIBILITY ENHANCEMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable animations for users who prefer reduced motion */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  /* High contrast mode */
+  .btn {
+    border: 2px solid currentColor !important;
+  }
+  
+  .card {
+    border: 2px solid currentColor !important;
+  }
+  
+  .form-control:focus {
+    outline: 3px solid currentColor !important;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  /* Optional: Add dark mode support if needed */
+  /* Currently maintaining gold theme regardless of system preference */
+}
+
+/* ===== UTILITY CLASSES FOR RESPONSIVE DESIGN ===== */
+.mobile-only {
+  display: block;
+}
+
+.tablet-only,
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+  
+  .tablet-only {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) {
+  .tablet-only {
+    display: none;
+  }
+  
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* ===== FLEXIBLE GRID SYSTEM ===== */
+.responsive-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 576px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== RESPONSIVE TYPOGRAPHY ===== */
+.responsive-text {
+  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  line-height: 1.6;
+}
+
+.responsive-heading {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  line-height: 1.2;
+}
+
+.responsive-subheading {
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
+  line-height: 1.4;
+}

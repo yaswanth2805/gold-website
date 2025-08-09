@@ -1,0 +1,321 @@
+/* Social Media and Navigation Fixes for SRISTAR GOLD COMPANY */
+
+/* ===== REMOVE BLUR EFFECTS FROM SOCIAL MEDIA LINKS ===== */
+.floating-dock {
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 25px !important;
+}
+
+.floating-dock-item {
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* ===== ENHANCED TOOLTIP STYLES ===== */
+.floating-dock-item[data-title] {
+    position: relative;
+}
+
+/* Remove conflicting tooltip styles */
+.floating-dock-item::before {
+    display: none !important;
+}
+
+.floating-dock-item::after {
+    display: none !important;
+}
+
+/* New tooltip implementation */
+.floating-dock-item[data-title]:hover::before {
+    content: attr(data-title) !important;
+    position: absolute !important;
+    bottom: 120% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    color: #ffffff !important;
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 9999 !important;
+    pointer-events: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+    display: block !important;
+    animation: tooltipFadeIn 0.3s ease !important;
+}
+
+.floating-dock-item[data-title]:hover::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 110% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    border-top: 6px solid rgba(0, 0, 0, 0.9) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 9999 !important;
+    pointer-events: none !important;
+    display: block !important;
+    animation: tooltipFadeIn 0.3s ease !important;
+}
+
+/* ===== HOVER EFFECTS FOR BETTER VISIBILITY ===== */
+.floating-dock-item:hover {
+    background: rgba(255, 255, 255, 0.4) !important;
+    transform: translateY(-3px) scale(1.1) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* ===== SPECIFIC SOCIAL MEDIA HOVER COLORS ===== */
+.floating-dock-item[data-title="Facebook"]:hover {
+    background: rgba(24, 119, 242, 0.3) !important;
+    color: #1877f2 !important;
+    border-color: rgba(24, 119, 242, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(24, 119, 242, 0.3) !important;
+}
+
+.floating-dock-item[data-title="Twitter"]:hover {
+    background: rgba(29, 161, 242, 0.3) !important;
+    color: #1da1f2 !important;
+    border-color: rgba(29, 161, 242, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(29, 161, 242, 0.3) !important;
+}
+
+.floating-dock-item[data-title="YouTube"]:hover {
+    background: rgba(255, 0, 0, 0.3) !important;
+    color: #ff0000 !important;
+    border-color: rgba(255, 0, 0, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(255, 0, 0, 0.3) !important;
+}
+
+.floating-dock-item[data-title="Instagram"]:hover {
+    background: rgba(225, 48, 108, 0.3) !important;
+    color: #e1306c !important;
+    border-color: rgba(225, 48, 108, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(225, 48, 108, 0.3) !important;
+}
+
+/* ===== QUICK LINKS HOVER COLORS ===== */
+.floating-dock-item[data-title="Services"]:hover {
+    background: rgba(40, 167, 69, 0.3) !important;
+    color: #28a745 !important;
+    border-color: rgba(40, 167, 69, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(40, 167, 69, 0.3) !important;
+}
+
+.floating-dock-item[data-title="About"]:hover {
+    background: rgba(23, 162, 184, 0.3) !important;
+    color: #17a2b8 !important;
+    border-color: rgba(23, 162, 184, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(23, 162, 184, 0.3) !important;
+}
+
+.floating-dock-item[data-title="Branches"]:hover {
+    background: rgba(220, 53, 69, 0.3) !important;
+    color: #dc3545 !important;
+    border-color: rgba(220, 53, 69, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(220, 53, 69, 0.3) !important;
+}
+
+.floating-dock-item[data-title="Contact"]:hover {
+    background: rgba(255, 193, 7, 0.3) !important;
+    color: #ffc107 !important;
+    border-color: rgba(255, 193, 7, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(255, 193, 7, 0.3) !important;
+}
+
+.floating-dock-item[data-title="Blog"]:hover {
+    background: rgba(108, 117, 125, 0.3) !important;
+    color: #6c757d !important;
+    border-color: rgba(108, 117, 125, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(108, 117, 125, 0.3) !important;
+}
+
+.floating-dock-item[data-title="Gallery"]:hover {
+    background: rgba(102, 16, 242, 0.3) !important;
+    color: #6610f2 !important;
+    border-color: rgba(102, 16, 242, 0.5) !important;
+    box-shadow: 0 8px 24px rgba(102, 16, 242, 0.3) !important;
+}
+
+/* ===== ANIMATION FOR TOOLTIPS ===== */
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* ===== HEADER TOP BAR SOCIAL MEDIA FIXES ===== */
+.top-bar .floating-dock {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.top-bar .floating-dock-item {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    color: #ffffff !important;
+}
+
+.top-bar .floating-dock-item:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+}
+
+/* ===== FOOTER SOCIAL MEDIA FIXES ===== */
+footer .floating-dock {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+footer .floating-dock-item {
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    color: #ffffff !important;
+}
+
+footer .floating-dock-item:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+}
+
+/* ===== MOBILE RESPONSIVE FIXES ===== */
+@media (max-width: 768px) {
+    .floating-dock-item[data-title]:hover::before,
+    .floating-dock-item[data-title]:hover::after {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .floating-dock-item[data-title]:hover::before {
+        font-size: 10px !important;
+        padding: 6px 8px !important;
+        bottom: 130% !important;
+    }
+}
+
+/* ===== ENSURE VISIBILITY ON ALL BACKGROUNDS ===== */
+.bg-dark .floating-dock,
+.bg-dark-blue .floating-dock {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.bg-dark .floating-dock-item,
+.bg-dark-blue .floating-dock-item {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+}
+
+.bg-light .floating-dock {
+    background: rgba(0, 0, 0, 0.1) !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.bg-light .floating-dock-item {
+    background: rgba(0, 0, 0, 0.15) !important;
+    border-color: rgba(0, 0, 0, 0.2) !important;
+    color: #333333 !important;
+}
+
+/* ===== ADDITIONAL FIXES FOR BETTER VISIBILITY ===== */
+/* Ensure social media links are always visible */
+.top-bar .floating-dock-item,
+footer .floating-dock-item,
+.floating-dock-item {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+
+/* Force tooltip display on hover */
+.floating-dock-item:hover[data-title]::before {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 10000 !important;
+}
+
+.floating-dock-item:hover[data-title]::after {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 10000 !important;
+}
+
+/* Override any conflicting styles */
+.floating-dock-item[data-title]:not(:hover)::before,
+.floating-dock-item[data-title]:not(:hover)::after {
+    display: none !important;
+}
+
+/* Ensure proper spacing and layout */
+.floating-dock {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    padding: 0.75rem !important;
+}
+
+/* Make sure icons are visible */
+.floating-dock-item i {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: inherit !important;
+}
+
+/* Enhanced hover effects for better user experience */
+.floating-dock-item:hover {
+    transform: translateY(-3px) scale(1.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Specific fixes for header and footer */
+.top-bar .floating-dock {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+footer .floating-dock {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Quick Links specific fixes */
+footer .floating-dock .floating-dock-item {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+}
+
+footer .floating-dock .floating-dock-item:hover {
+    background: rgba(255, 255, 255, 0.4) !important;
+    color: #ffffff !important;
+}

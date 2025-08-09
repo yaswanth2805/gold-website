@@ -1,0 +1,401 @@
+/* Gold Calculator Styles */
+
+/* Know Your Gold Price Button Section */
+.btn-warning.btn-lg {
+  background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.btn-warning.btn-lg:hover {
+  background: linear-gradient(135deg, #e0a800 0%, #f57f17 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.5);
+}
+
+.btn-warning.btn-lg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn-warning.btn-lg:hover::before {
+  left: 100%;
+}
+
+/* Know Your Gold Price Section Animation */
+.know-gold-price-section {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calculator-container {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.calculator-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ffc107, #ffeb3b, #ffc107);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.calculator-icon {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.calculator-form .form-control,
+.calculator-form .form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  padding: 12px 16px;
+}
+
+.calculator-form .form-control:focus,
+.calculator-form .form-select:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+  transform: translateY(-2px);
+}
+
+.calculator-form .form-label {
+  color: #495057;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.calculator-form .form-label i {
+  font-size: 1.1rem;
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #ffc107 0%, #ffeb3b 100%);
+  border: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-warning:hover {
+  background: linear-gradient(135deg, #e0a800 0%, #f57f17 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.4);
+}
+
+.btn-warning::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.btn-warning:hover::before {
+  left: 100%;
+}
+
+.results-section {
+  animation: slideInUp 0.5s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-success {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  border-left: 5px solid #28a745;
+}
+
+.estimated-value h2 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calculation-details {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+/* Current Gold Rates Section */
+.rate-card {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.rate-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-color: #ffc107;
+}
+
+.rate-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.rate-card:hover::before {
+  left: 100%;
+}
+
+.rate-card i {
+  transition: transform 0.3s ease;
+}
+
+.rate-card:hover i {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.rate-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+/* Page Header Enhancements */
+.page-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffc107" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffc107" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffc107" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="%23ffc107" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="%23ffc107" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Form Validation Styles */
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: #dc3545;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.invalid-feedback {
+  display: block;
+  font-size: 0.875rem;
+  color: #dc3545;
+  margin-top: 5px;
+}
+
+/* Loading Animation */
+.loading {
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #ffc107;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calculator-container {
+    padding: 2rem 1.5rem !important;
+  }
+  
+  .estimated-value h2 {
+    font-size: 2rem;
+  }
+  
+  .rate-card {
+    margin-bottom: 1rem;
+  }
+  
+  .calculator-form .form-control,
+  .calculator-form .form-select {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+  
+  .btn-warning {
+    padding: 12px 30px !important;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .calculator-container {
+    padding: 1.5rem 1rem !important;
+  }
+  
+  .estimated-value h2 {
+    font-size: 1.8rem;
+  }
+  
+  .rate-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Success Animation */
+.success-animation {
+  animation: successPulse 0.6s ease-out;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Input Focus Effects */
+.form-floating {
+  position: relative;
+}
+
+.form-control:focus ~ .form-label,
+.form-select:focus ~ .form-label {
+  color: #ffc107;
+  transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+/* Gold Particle Animation */
+.gold-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.gold-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffc107;
+  border-radius: 50%;
+  animation: float 6s infinite linear;
+  opacity: 0.6;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,134 @@
+/* Get In Touch Modal Styles */
+#getInTouchModal .modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#getInTouchModal .modal-header {
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+#getInTouchModal .modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#getInTouchModal .modal-body {
+  background: linear-gradient(135deg, #FFF8DC 0%, #FFFEF7 100%);
+}
+
+#getInTouchModal .form-label {
+  color: #8B4513;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+#getInTouchModal .form-control,
+#getInTouchModal .form-select {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+#getInTouchModal .form-control:focus,
+#getInTouchModal .form-select:focus {
+  border-color: #D4AF37;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+  transform: translateY(-1px);
+}
+
+#getInTouchModal .btn-outline-primary {
+  border: 2px solid #D4AF37;
+  color: #D4AF37;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+#getInTouchModal .btn-outline-primary:hover {
+  background: #D4AF37;
+  color: #8B4513;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+#getInTouchModal .btn-success {
+  background: linear-gradient(135deg, #28a745, #20c997);
+  border: none;
+  font-weight: 600;
+}
+
+#getInTouchModal .btn-warning {
+  background: linear-gradient(135deg, #D4AF37, #FFD700);
+  border: none;
+  color: #36454F;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  min-width: 180px;
+}
+
+#getInTouchModal .btn-warning:hover {
+  background: linear-gradient(135deg, #B8860B, #D4AF37);
+  color: #FFFEF7;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Custom notification styles */
+.custom-notification {
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+}
+
+.custom-notification.alert-success {
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+  color: #155724;
+  border-left: 4px solid #28a745;
+}
+
+.custom-notification.alert-danger {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+/* Modal animation */
+#getInTouchModal.fade .modal-dialog {
+  transform: translateY(-50px);
+  transition: transform 0.3s ease-out;
+}
+
+#getInTouchModal.show .modal-dialog {
+  transform: translateY(0);
+}
+
+/* Form field icons */
+#getInTouchModal .form-label i {
+  color: #D4AF37;
+  width: 16px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #getInTouchModal .modal-dialog {
+    margin: 1rem;
+  }
+  
+  #getInTouchModal .modal-title {
+    font-size: 1.25rem;
+  }
+  
+  #getInTouchModal .btn-warning {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.5rem;
+    min-width: 150px;
+  }
+}
