@@ -1,0 +1,89 @@
+/* Brand Text Styles for Navbar */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-main {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: goldenrod;
+  margin: 0;
+  padding: 0;
+}
+
+.brand-sub {
+  font-size: 1rem;
+  font-weight: 500;
+  color: goldenrod;
+  margin: 0;
+  padding: 0;
+  margin-top: -2px;
+}
+
+/* Responsive adjustments for brand text */
+@media (max-width: 768px) {
+  .brand-main {
+    font-size: 1.1rem;
+  }
+  
+  .brand-sub {
+    font-size: 0.65rem;
+  }
+}
+
+/* New Navbar Logo Text Style (replaces old brand-main/sub) */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  color: #fff;
+}
+
+.logo-main {
+  font-size: 2.2rem;          /* prominent SRISTAR */
+  font-weight: 700;
+  letter-spacing: 2px;        /* spacing between letters */
+  margin: 0;
+  color: #fff !important;     /* ensure white over theme overrides */
+}
+
+.logo-sub {
+  font-size: 1rem;            /* smaller GOLD COMPANY */
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0;
+  margin-top: -2px;
+  color: #fff !important;     
+}
+
+/* Responsive scaling for the logo text */
+@media (max-width: 768px) {
+  .logo-main {
+    font-size: 1.3rem;
+  }
+  .logo-sub {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* Hero mobile fixes: remove black overlay and backgrounds over video */
+.hero-sell-gold-updated,
+.hero-sell-gold-updated::before {
+  background: transparent !important;
+}
+
+@media (max-width: 991.98px) {
+  .hero-content-updated {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-content-updated {
+    background: transparent !important;
+  }
+}
