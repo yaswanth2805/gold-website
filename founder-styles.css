@@ -22,7 +22,8 @@
 
 @media (max-width: 576px) {
   .founder-image {
-    width: 80px !important;
-    height: 80px !important;
+    width: 250px !important;
+    height: 250px !important;
   }
+
 }
