@@ -1,7 +1,7 @@
 /* Founder Image Styles */
 .founder-image {
-  width: 200px !important;
-  height: 200px !important;
+  width: 250px !important;
+  height: 250px !important;
   object-fit:fill;
   border: 3px solid #f8f9fa;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -15,8 +15,8 @@
 /* Responsive founder image sizes */
 @media (max-width: 768px) {
   .founder-image {
-    width: 100px !important;
-    height: 100px !important;
+    width: 250px !important;
+    height: 250px !important;
   }
 }
 
@@ -27,3 +27,4 @@
   }
 
 }
+
