@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRISTAR GOLD COMPANY - Sell Gold Instantly</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Original CSS Files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="spotlight.css">
+    <link rel="stylesheet" href="floating-dock.css">
+    <link rel="stylesheet" href="glassmorphism.css">
+    <link rel="stylesheet" href="comparison.css">
+    <link rel="stylesheet" href="animated-testimonials.css">
+    <link rel="stylesheet" href="gold-price-ticker.css">
+    <link rel="stylesheet" href="modal-styles.css">
+    <link rel="stylesheet" href="navigation.css">
+    <!-- Enhanced CSS Files - Load after original for better performance -->
+    <link rel="stylesheet" href="performance-optimizations.css">
+    <!-- Gold Company Color Scheme - Load last to override all colors -->
+    <link rel="stylesheet" href="gold-company-colors.css">
+    <!-- Comprehensive Responsive Enhancements -->
+    <link rel="stylesheet" href="responsive-enhancements.css">
+    <!-- Social Media and Navigation Fixes -->
+    <link rel="stylesheet" href="social-media-fixes.css">
+    <!-- Navigation Position Fix - Load last to override all navigation styles -->
+    <link rel="stylesheet" href="navigation-fix.css">
+    <!-- OFFICIAL GOLD COMPANY THEME - MASTER OVERRIDE (Load absolutely last) -->
+    <link rel="stylesheet" href="official-gold-company-theme.css">
+    <!-- Navigation Layout Fix - Single Line & Light Colors (Load absolutely last) -->
+    <link rel="stylesheet" href="navigation-layout-fix.css">
+    <!-- Homepage Improvements - Load absolutely last to override all styles -->
+    <link rel="stylesheet" href="homepage-improvements.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Dropdown Visibility and Functionality Fix -->
+    <link rel="stylesheet" href="dropdown-fix.css">
+    <!-- Footer Alignment Fixes -->
+    <link rel="stylesheet" href="footer-fixes.css">
+    <!-- Gold Calculator Button Styles -->
+    <link rel="stylesheet" href="gold-calculator.css">
+    <!-- Brand Text Styles -->
+    <link rel="stylesheet" href="brand-styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- Get In Touch Pop-up Modal -->
+    <div class="modal fade" id="getInTouchModal" tabindex="-1" aria-labelledby="getInTouchModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-dark-blue text-white border-0">
+                    <h5 class="modal-title fw-bold" id="getInTouchModalLabel">
+                        <i class="fas fa-coins me-2"></i>Get Your Best Gold Offer
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="getInTouchForm">
+                        <div class="row g-3">
+                            <!-- Name Field -->
+                            <div class="col-md-6">
+                                <label for="customerName" class="form-label fw-semibold">
+                                    <i class="fas fa-user me-1"></i>Full Name *
+                                </label>
+                                <input type="text" class="form-control" id="customerName" name="customerName" pattern="[A-Za-z\s\.]+" title="Only letters, spaces, and periods allowed" required>
+                            </div>
+                            
+                            <!-- Email Field -->
+                            <div class="col-md-6">
+                                <label for="customerEmail" class="form-label fw-semibold">
+                                    <i class="fas fa-envelope me-1"></i>Email ID *
+                                </label>
+                                <input type="email" class="form-control" id="customerEmail" name="customerEmail" pattern="[a-zA-Z0-9._%+-]+@gmail\.com$" title="Please enter a valid Gmail address (example@gmail.com)" required>
+                            </div>
+                            
+                            <!-- Phone Field -->
+                            <div class="col-md-8">
+                                <label for="customerPhone" class="form-label fw-semibold">
+                                    <i class="fas fa-phone me-1"></i>Phone Number *
+                                </label>
+                                <input type="tel" class="form-control" id="customerPhone" name="customerPhone" pattern="[0-9]{10}" maxlength="10" title="Please enter exactly 10 digits" required>
+                            </div>
+                            
+                            <!-- OTP Button -->
+                            <div class="col-md-4 d-flex align-items-end">
+                                <button type="button" class="btn btn-outline-primary w-100" id="sendOtpBtn">
+                                    <i class="fas fa-paper-plane me-1"></i>Send OTP
+                                </button>
+                            </div>
+                            
+                            <!-- OTP Field -->
+                            <div class="col-md-6">
+                                <label for="customerOtp" class="form-label fw-semibold">
+                                    <i class="fas fa-key me-1"></i>Enter OTP
+                                </label>
+                                <input type="text" class="form-control" id="customerOtp" name="customerOtp" maxlength="6" disabled>
+                            </div>
+                            
+                            <!-- Select State -->
+                            <div class="col-md-6">
+                                <label for="customerState" class="form-label fw-semibold">
+                                    <i class="fas fa-map-marker-alt me-1"></i>Select State *
+                                </label>
+                                <select class="form-select" id="customerState" name="customerState" required>
+                                    <option value="">Choose State...</option>
+                                    <option value="karnataka">Karnataka</option>
+                                    <option value="tamil-nadu">Tamil Nadu</option>
+                                    <option value="andhra-pradesh">Andhra Pradesh</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Select City -->
+                            <div class="col-md-6">
+                                <label for="customerCity" class="form-label fw-semibold">
+                                    <i class="fas fa-city me-1"></i>Select City *
+                                </label>
+                                <select class="form-select" id="customerCity" name="customerCity" required>
+                                    <option value="">Choose City...</option>
+                                    <option value="bangalore">Bangalore</option>
+                                    <option value="chennai">Chennai</option>
+                                    <option value="hyderabad">Hyderabad</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Gold Purity -->
+                            <div class="col-md-6">
+                                <label for="goldPurity" class="form-label fw-semibold">
+                                    <i class="fas fa-gem me-1"></i>Gold Purity *
+                                </label>
+                                <select class="form-select" id="goldPurity" name="goldPurity" required>
+                                    <option value="">Select Purity...</option>
+                                    <option value="24k">24K Gold</option>
+                                    <option value="22k">22K Gold</option>
+                                    <option value="18k">18K Gold</option>
+                                    <option value="silver">Silver</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Gold Weight -->
+                            <div class="col-md-6">
+                                <label for="goldWeight" class="form-label fw-semibold">
+                                    <i class="fas fa-weight me-1"></i>Gold Weight (grams) *
+                                </label>
+                                <input type="number" class="form-control" id="goldWeight" name="goldWeight" min="0.1" step="0.1" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="row mt-4">
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-warning btn-md px-4 py-2 fw-semibold rounded shadow">
+                                    <i class="fas fa-hand-holding-usd me-2"></i>Get My Offers
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+     <div class="top-bar bg-dark-blue text-white py-2 d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="contact-info">
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                    </svg></i>+91 63 66 333 444</span>
+                <span class="ms-4"><i class="fas fa-map-marker-alt me-2"></i>#280/1, Anniamma Arcade, 2nd Floor, Sampige
+                    Road, 18th Cross signal, Malleshwaram, Bangalore - 560003</span>
+            </div>
+            <div class="d-flex align-items-center">
+                
+                <span class="me-3">FOLLOW US:</span>
+                <a href="https://www.facebook.com/sristargold" class="text-white me-2"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/sristargoldmall?s=21" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/YOUR_YOUTUBE_CHANNEL_ID" class="text-white"><i
+                        class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navigation sticky-top">
+        <div class="container">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand d-flex align-items-center" >
+                <img src="img/Sristar Gold Company.png" alt="SRISTAR GOLD COMPANY Logo" class="navbar-logo me-2" style="height: 40px; width: auto;">
+                <div class="logo-text">
+                    <h1 class="logo-main">SRISTAR</h1>
+                    <h2 class="logo-sub">GOLD COMPANY</h2>
+                </div>
+            </a>
+            
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About Us.html">
+                            <i class="fas fa-info-circle me-1"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="branches.html">
+                            <i class="fas fa-map-marker-alt me-1"></i>Branches
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">
+                            <i class="fas fa-cogs me-1"></i>Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="album.html">
+                            <i class="fas fa-images me-1"></i>Album
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">
+                            <i class="fas fa-blog me-1"></i>Blogs
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope me-1"></i>Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<header id="home"
+    class="hero-sell-gold-updated text-white d-flex align-items-center justify-content-center position-relative">
+    <video autoplay muted loop playsinline preload="metadata" class="hero-background-video" 
+           poster="img/video-poster.jpg">
+        <source src="img/freecompress-Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container-fluid h-100 position-relative z-1">
+        <div class="row align-items-center h-100">
+            <div class="col-12 text-center hero-content-updated">
+                <div class="hero-text">
+                    <h1 class="display-3 fw-bold mb-3 text-white">Sell Your Old Gold</h1>
+                    <h2 class="display-4 fw-bold text-warning mb-4">Get Cash Instantly</h2>
+                    <ul class="list-unstyled mb-5 hero-features text-white">
+                    </ul>
+                    <a href="contact.html" class="btn btn-warning btn-lg rounded-pill shadow-lg">GET IN TOUCH</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <!-- Live Gold Price Section -->
+    <section id="gold-price-ticker" class="py-3 bg-warning">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="gold-price-container d-flex justify-content-center align-items-center flex-wrap">
+                        <div class="price-item me-4 mb-2">
+                            <span class="price-label fw-bold text-dark">
+                                <i class="fas fa-coins me-2"></i>Gold 24K:
+                            </span>
+                            <span class="price-value fw-bold text-dark" id="gold-24k">
+                                ₹<span id="gold-24k-price">Loading...</span>/gram
+                            </span>
+                        </div>
+                        <div class="price-item me-4 mb-2">
+                            <span class="price-label fw-bold text-dark">
+                                <i class="fas fa-ring me-2"></i>Gold 22K:
+                            </span>
+                            <span class="price-value fw-bold text-dark" id="gold-22k">
+                                ₹<span id="gold-22k-price">Loading...</span>/gram
+                            </span>
+                        </div>
+                        <div class="price-item me-4 mb-2">
+                            <span class="price-label fw-bold text-dark">
+                                <i class="fas fa-ring me-2"></i>Gold 18K:
+                            </span>
+                            <span class="price-value fw-bold text-dark" id="gold-18k">
+                                ₹<span id="gold-18k-price">Loading...</span>/gram
+                            </span>
+                        </div>
+                        <div class="price-item me-4 mb-2">
+                            <span class="price-label fw-bold text-dark">
+                                <i class="fas fa-gem me-2"></i>Silver:
+                            </span>
+                            <span class="price-value fw-bold text-dark" id="silver">
+                                ₹<span id="silver-price">126</span>/gram
+                            </span>
+                        </div>
+                        <div class="price-item mb-2">
+                            <span class="price-update text-dark">
+                                <i class="fas fa-clock me-1"></i>
+                                Last Updated: <span id="last-updated">--</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Know Your Gold Price Section -->
+    <section class="py-4 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h3 class="fw-bold mb-3 text-dark">
+                        <i class="fas fa-calculator me-2 text-warning"></i>
+                        Want to Know Your Gold's Exact Value?
+                    </h3>
+                    <p class="text-muted mb-4">
+                        Use our advanced gold calculator to get instant price estimates based on current market rates, weight, and purity of your gold.
+                    </p>
+                    <a href="gold-calculator.html" class="btn btn-warning btn-lg rounded-pill px-5 py-3 shadow-lg">
+                        <i class="fas fa-calculator me-2"></i>Know Your Gold Price
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--HOW IT WORKS SECTION-->
+    <section id="how-it-works" class="py-5 bg-dark-blue text-black">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold">How It Works</h2>
+            <div class="row text-center justify-content-center g-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="how-it-works-step h-100 d-flex flex-column">
+                        <div class="step-icon mb-2">
+                            <i class="fas fa-hand-holding-usd  text-warning"></i>
+                        </div>
+                        <h3 class="step-number fw-bold mb-2 text-black">STEP 1</h3>
+                        <h4 class="step-title fw-semibold mb-2">Visit the Store</h4>
+                        <p class="step-description flex-grow-1 mb-0">Customers give their Gold to SRISTAR Gold for professional valuation and assessment</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="how-it-works-step h-100 d-flex flex-column">
+                        <div class="step-icon mb-2">
+                            <i class="fas fa-microscope  text-warning"></i>
+                        </div>
+                        <h3 class="step-number fw-bold mb-2">STEP 2</h3>
+                        <h4 class="step-title fw-semibold mb-2">Gold Cleaning</h4>
+                        <p class="step-description flex-grow-1 mb-0">All dirt is removed from your Gold with ultrasonic machines in front of you</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="how-it-works-step h-100 d-flex flex-column">
+                        <div class="step-icon mb-2">
+                            <i class="fas fa-balance-scale  text-warning"></i>
+                        </div>
+                        <h3 class="step-number fw-bold mb-2">STEP 3</h3>
+                        <h4 class="step-title fw-semibold mb-2">Gold Valuation</h4>
+                        <p class="step-description flex-grow-1 mb-0">Value, weight & purity of Gold is checked on advanced XRF machines in front of you</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="how-it-works-step h-100 d-flex flex-column">
+                        <div class="step-icon mb-2">
+                            <i class="fas fa-coins text-warning"></i>
+                        </div>
+                        <h3 class="step-number fw-bold mb-2">STEP 4</h3>
+                        <h4 class="step-title fw-semibold mb-2">Gold Rate</h4>
+                        <p class="step-description flex-grow-1 mb-0">Gold is valued as per the current market price with complete transparency and accuracy</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+                    <div class="how-it-works-step h-100 d-flex flex-column">
+                        <div class="step-icon mb-2">
+                            <i class="fas fa-money-bill-wave text-warning"></i>
+                        </div>
+                        <h3 class="step-number fw-bold mb-2">STEP 5</h3>
+                        <h4 class="step-title fw-semibold mb-2">Instant Payment</h4>
+                        <p class="step-description flex-grow-1 mb-0">Get up to Rs 10,000 as cash. Higher amounts instantly paid to your bank account via NEFT/IMPS/RTGS</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YouTube Video Section -->
+    <section id="video-section" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-dark">Watch Our Process in Action</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="video-container rounded-3 shadow-lg overflow-hidden">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/uZcxJYPpxC8?si=RvfqmoyZWoivVtz5"
+                                title="SRISTAR GOLD COMPANY Process" allowfullscreen class="rounded-3">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <p class="lead text-muted">See how we ensure complete transparency in our gold buying process
+                        </p>
+                        <a href="https://youtu.be/uZcxJYPpxC8?si=RvfqmoyZWoivVtz5" target="_blank"
+                            class="btn btn-primary rounded-pill">
+                            <i class="https://www.youtube.com/embed/uZcxJYPpxC8?si=RvfqmoyZWoivVtz5"></i>Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How SRISTAR GOLD COMPANY is different from traditional jewellers -->
+    <section id="why-different" class="py-5 bg-gradient-dark position-relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 opacity-10">
+            <div class="d-flex flex-wrap">
+                <div class="bg-warning" style="width: 20px; height: 20px; margin: 10px;"></div>
+                <div class="bg-primary" style="width: 20px; height: 20px; margin: 10px;"></div>
+                <div class="bg-warning" style="width: 20px; height: 20px; margin: 10px;"></div>
+            </div>
+        </div>
+        
+        <div class="container position-relative">
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <div class="d-inline-block position-relative">
+                    <h2 class="display-4 fw-bold text-white mb-3">
+                         <span class="text-warning">WHY CHOOSE  SRISTAR GOLD COMPANY</span>?
+                    </h2>
+                    <div class="bg-warning mx-auto" style="height: 4px; width: 100px; border-radius: 2px;"></div>
+                </div>
+                <p class="lead text-light mt-3 opacity-75">Experience the difference with our transparent and professional approach</p>
+            </div>
+
+            <!-- Comparison Cards -->
+            <div class="row g-5 align-items-stretch">
+                <!-- Traditional Jewellers Card -->
+               <div class="col-lg-6">
+                    <div class="comparison-card-new h-100 position-relative">
+                        <div class="card border-0 shadow-lg h-100 bg-gradient-primary">
+                            <div class="card-header bg-warning text-dark text-center py-4 border-0">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <h3 class="mb-0 fw-bold">Traditional Jewellers</h3>
+                                </div>
+                                <small class="opacity-75">The old way of doing business</small>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="comparison-items">
+                                    <div class="comparison-item d-flex align-items-start mb-4 p-3 bg-white rounded-3 shadow-sm">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-times text-danger fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-dark fw-semibold">Hidden Charges</h6>
+                                            <small class="text-muted">Unexpected deductions and fees</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comparison-item d-flex align-items-start mb-4 p-3 bg-white rounded-3 shadow-sm">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-times text-danger fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-dark fw-semibold">No Transparency</h6>
+                                            <small class="text-muted">Testing done behind closed doors</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comparison-item d-flex align-items-start mb-4 p-3 bg-white rounded-3 shadow-sm">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-times text-danger fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-dark fw-semibold">Lower Rates</h6>
+                                            <small class="text-muted">Below market value pricing</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comparison-item d-flex align-items-start mb-4 p-3 bg-white rounded-3 shadow-sm">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-times text-danger fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-dark fw-semibold">Poor Documentation</h6>
+                                            <small class="text-muted">Incomplete or missing paperwork</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comparison-item d-flex align-items-start mb-4 p-3 bg-white rounded-3 shadow-sm">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-times text-danger fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-dark fw-semibold">Time Consuming</h6>
+                                            <small class="text-muted">Long waiting periods</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comparison-item d-flex align-items-start mb-3 p-3 bg-white rounded-3 shadow-sm">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-times text-danger fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-dark fw-semibold">Limited Payment</h6>
+                                            <small class="text-muted">Few payment options available</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SRISTAR GOLD COMPANY Card -->
+                <div class="col-lg-6">
+                    <div class="comparison-card-new h-100 position-relative">
+                        <div class="card border-0 shadow-lg h-100 bg-gradient-primary">
+                            <div class="card-header bg-warning text-dark text-center py-4 border-0">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="fas fa-crown fs-2 me-3"></i>
+                                    <h3 class="mb-0 fw-bold">SRISTAR GOLD COMPANY</h3>
+                                </div>
+                                <small class="text-dark">The modern, transparent approach</small>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="comparison-items">
+                                    <div class="comparison-item d-flex align-items-start mb-4 p-3 bg-white bg-opacity-15 rounded-3 backdrop-blur">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-check text-black fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-black fw-semibold">100% Transparent Pricing</h6>
+                                            <small class="text-dark opacity-75">No hidden charges or deductions</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comparison-item d-flex align-items-start mb-4 p-3 bg-white bg-opacity-15 rounded-3 backdrop-blur">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-check text-black fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-black fw-semibold">XRF Testing</h6>
+                                            <small class="text-black opacity-75">Advanced testing in front of customers</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comparison-item d-flex align-items-start mb-4 p-3 bg-white bg-opacity-15 rounded-3 backdrop-blur">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-check text-black fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-black fw-semibold">Best Market Rates</h6>
+                                            <small class="text-black opacity-75">Guaranteed competitive pricing</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comparison-item d-flex align-items-start mb-4 p-3 bg-white bg-opacity-15 rounded-3 backdrop-blur">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-check text-black fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-black fw-semibold">Complete Documentation</h6>
+                                            <small class="text-black opacity-75">Proper paperwork provided</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comparison-item d-flex align-items-start mb-4 p-3 bg-white bg-opacity-15 rounded-3 backdrop-blur">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-check text-black fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-black fw-semibold">Quick 15-Minute Process</h6>
+                                            <small class="text-blackk  opacity-75">Fast and efficient service</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="comparison-item d-flex align-items-start mb-3 p-3 bg-white bg-opacity-15 rounded-3 backdrop-blur">
+                                        <div class="icon-wrapper bg-warning bg-opacity-20 rounded-circle p-2 me-3 flex-shrink-0">
+                                            <i class="fas fa-check text-black fs-5"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 text-black fw-semibold">Multiple Payment Options</h6>
+                                            <small class="text-black opacity-75">Cash, NEFT, IMPS, RTGS available</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Premium Badge -->
+                        <div class="position-absolute top-0 end-0 translate-middle">
+                            <span class="badge bg-warning text-dark px-3 py-2 rounded-pill shadow">
+                                <i class="fas fa-star me-1"></i>PREMIUM
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-5">
+                <div class="bg-warning bg-opacity-10 rounded-4 p-4 d-inline-block">
+                    <h4 class="text-warning mb-3">Experience the SRISTAR Difference Today!</h4>
+                    <a href="contact.html" class="btn btn-warning btn-lg rounded-pill px-5 py-3 shadow-lg">
+                        <i class="fas fa-phone me-2"></i>Get Started Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Animated Testimonials - Our Customer Stories -->
+    <section id="testimonials" class="py-5 bg-dark position-relative overflow-hidden">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-primary">Testimonials - Our Customer Stories</h2>
+            
+            <!-- Animated Testimonials Container -->
+            <div class="animated-testimonials-container position-relative">
+                <div class="testimonials-wrapper d-flex align-items-center justify-content-center" style="min-height: 400px;">
+                    
+                    <!-- Testimonial 1 -->
+                    <div class="animated-testimonial active" data-index="0">
+                        <div class="testimonial-card mx-auto" style="max-width: 800px;">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center mb-4 mb-md-0">
+                                    <div class="testimonial-avatar">
+                                        <img src="img/Priya Sharma_27_11zon.webp" 
+                                             alt="Priya Sharma" class="rounded-circle shadow-lg" style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="testimonial-content text-center text-md-start">
+                                        <div class="stars mb-3">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <blockquote class="mb-4">
+                                            <p class="fs-5 text-black ">"Excellent service! They tested my gold right in front of me and gave me the best price. Very transparent and trustworthy. The entire process was professional and I felt completely secure."</p>
+                                        </blockquote>
+                                        <div class="customer-info">
+                                            <h5 class="mb-1 text-warning fw-bold">Priya Sharma</h5>
+                                            <small class="text-warning">Gold Seller from Bangalore</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="animated-testimonial" data-index="1">
+                        <div class="testimonial-card mx-auto" style="max-width: 800px;">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center mb-4 mb-md-0">
+                                    <div class="testimonial-avatar">
+                                        <img src="img/Rajesh Kumar_29_11zon.jpg" 
+                                             alt="Rajesh Kumar" class="rounded-circle shadow-lg" style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="testimonial-content text-center text-md-start">
+                                        <div class="stars mb-3">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <blockquote class="mb-4">
+                                            <p class="fs-5 text-black mb-0 ">"Professional staff and fair pricing. They explained everything clearly and I got instant payment. Will definitely come back! The transparency in their process is remarkable."</p>
+                                        </blockquote>
+                                        <div class="customer-info">
+                                            <h5 class="mb-1 text-blue fw-bold">Rajesh Kumar</h5>
+                                            <small class="text-warning">Business Owner from Malleshwaram</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="animated-testimonial" data-index="2">
+                        <div class="testimonial-card mx-auto" style="max-width: 800px;">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center mb-4 mb-md-0">
+                                    <div class="testimonial-avatar">
+                                        <img src="img/Meera Reddy_17_11zon.jpg" 
+                                             alt="Meera Reddy" class="rounded-circle shadow-lg" style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="testimonial-content text-center text-md-start">
+                                        <div class="stars mb-3">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <blockquote class="mb-4">
+                                            <p class="fs-5 text-black mb-0 ">"Amazing experience! The entire process was completed quickly and I received fair value for my gold. Highly recommended! Their XRF testing technology is impressive."</p>
+                                        </blockquote>
+                                        <div class="customer-info">
+                                            <h5 class="mb-1 text-dark fw-bold">Meera Reddy</h5>
+                                            <small class="text-warning">Homemaker from Jayanagar</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="animated-testimonial" data-index="3">
+                        <div class="testimonial-card mx-auto" style="max-width: 800px;">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center mb-4 mb-md-0">
+                                    <div class="testimonial-avatar">
+                                        <img src="img/Arjun Patel_2_11zon.jpg" 
+                                             alt="Arjun Patel" class="rounded-circle shadow-lg" style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="testimonial-content text-center text-md-start">
+                                        <div class="stars mb-3">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <blockquote class="mb-4">
+                                            <p class="fs-5 text-black mb-0 ">"Outstanding support and robust service. It's rare to find a gold buyer that delivers on all its promises. The documentation process was thorough and professional."</p>
+                                        </blockquote>
+                                        <div class="customer-info">
+                                            <h5 class="mb-1 text-blue fw-bold">Arjun Patel</h5>
+                                            <small class="text-warning">Engineer from Electronic City</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="animated-testimonial" data-index="4">
+                        <div class="testimonial-card mx-auto" style="max-width: 800px;">
+                            <div class="row align-items-center">
+                                <div class="col-md-4 text-center mb-4 mb-md-0">
+                                    <div class="testimonial-avatar">
+                                        <img src="img/Lakshmi Nair_13_11zon.jpg" 
+                                             alt="Lakshmi Nair" class="rounded-circle shadow-lg" style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="testimonial-content text-center text-md-start">
+                                        <div class="stars mb-3">
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <blockquote class="mb-4">
+                                            <p class="fs-5 text-black mb-0 ">"The scalability and performance have been game-changing for my gold selling experience. Highly recommend to anyone looking for honest gold buyers with fair pricing."</p>
+                                        </blockquote>
+                                        <div class="customer-info">
+                                            <h5 class="mb-1 text-blue fw-bold">Lakshmi Nair</h5>
+                                            <small class="text-warning">Retired Teacher from Koramangala</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Navigation Dots -->
+                <div class="testimonial-dots text-center mt-4">
+                    <button class="dot active" data-index="0"></button>
+                    <button class="dot" data-index="1"></button>
+                    <button class="dot" data-index="2"></button>
+                    <button class="dot" data-index="3"></button>
+                    <button class="dot" data-index="4"></button>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button class="testimonial-nav prev-btn position-absolute top-50 start-0 translate-middle-y">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="testimonial-nav next-btn position-absolute top-50 end-0 translate-middle-y">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secure Your Account Section -->
+    <section id="auth-steps" class="py-5 bg-gradient-primary">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-white">Secure Your Account</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-lg" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-radius: 20px;">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-shield-alt text-primary" style="font-size: 3rem;"></i>
+                                <h4 class="fw-bold mt-3 text-dark">Account Security Steps</h4>
+                                <p class="text-muted">Follow these essential steps to protect your gold trading account</p>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 rounded-3" style="background: rgba(0, 123, 255, 0.1);">
+                                        <div class="flex-shrink-0 me-3">
+                                            <i class="fas fa-envelope text-primary" style="font-size: 1.5rem;"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 fw-bold text-dark">Email Verification</h6>
+                                            <small class="text-muted">Verify your email address</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 rounded-3" style="background: rgba(40, 167, 69, 0.1);">
+                                        <div class="flex-shrink-0 me-3">
+                                            <i class="fas fa-lock text-success" style="font-size: 1.5rem;"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 fw-bold text-dark">Strong Password</h6>
+                                            <small class="text-muted">Create a secure password</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 rounded-3" style="background: rgba(255, 193, 7, 0.1);">
+                                        <div class="flex-shrink-0 me-3">
+                                            <i class="fas fa-mobile-alt text-warning" style="font-size: 1.5rem;"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 fw-bold text-dark">Two-Factor Auth</h6>
+                                            <small class="text-muted">Enable 2FA protection</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-center p-3 rounded-3" style="background: rgba(220, 53, 69, 0.1);">
+                                        <div class="flex-shrink-0 me-3">
+                                            <i class="fas fa-id-card text-danger" style="font-size: 1.5rem;"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-1 fw-bold text-dark">Identity Verification</h6>
+                                            <small class="text-muted">Complete KYC process</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <a href="contact.html" class="btn btn-primary btn-lg rounded-pill px-5">
+                                    <i class="fas fa-user-plus me-2"></i>Get Started
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-dark-blue text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq1">
+                                 <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false"  aria-controls="collapse1">
+                                    What types of gold do you buy?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse " aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We buy all types of gold including jewelry, coins, bars, broken ornaments, and old
+                                    gold items. We accept gold from 8K to 24K purity levels.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq2">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    How do you test gold purity?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"  data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We use advanced XRF (X-Ray Fluorescence) machines that provide accurate purity
+                                    testing without damaging your gold. The entire process is done in front of you for
+                                    complete transparency.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq3">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    What documents do I need to bring?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    You need to bring a valid government-issued photo ID (Aadhar Card, PAN Card, Driving
+                                    License, or Passport) and the original purchase invoice of the gold if available.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq4">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    How do you determine the gold price?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our gold prices are based on current market rates, purity level, and weight. We
+                                    provide the best competitive rates with no hidden charges or unnecessary deductions.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                            <h2 class="accordion-header" id="faq5">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                    What payment methods do you offer?
+                                </button>
+                            </h2>
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer cash payment up to ₹10,000. For amounts above ₹10,000, we provide instant
+                                    bank transfer through NEFT, IMPS, or RTGS directly to your account.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FAQ Button Section -->
+            <div class="text-center mt-4">
+                <a href="frequent.html" class="btn btn-warning btn-lg rounded-pill px-4 py-2 fw-semibold">
+                    <i class="fas fa-question-circle me-2"></i>View All FAQs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Posts Section -->
+    <section id="recent-posts" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold text-dark">Recent Posts</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-preview-card bg-white text-dark rounded-3 shadow-sm h-100">
+                        <img src="img/Gold-as-an-Investment_7_11zon.png" class="card-img-top" alt="Gold Investment Tips">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">5 Tips for Smart Gold Investment in 2025</h5>
+                            <p class="card-text text-muted small">
+                                <i class="fas fa-calendar-alt me-1"></i> January 15, 2025
+                            </p>
+                            <p class="card-text">Learn the best strategies for investing in gold and maximizing your
+                                returns in the current market...</p>
+                            <a href="blog.html" class="btn btn-outline-primary btn-lg">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-preview-card bg-white text-dark rounded-3 shadow-sm h-100">
+                        <img src="img/febe111a-4946-419a-8d09-45696f118456.png" class="card-img-top" alt="Gold Purity Guide">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Understanding Gold Purity: Complete Guide</h5>
+                            <p class="card-text text-muted small">
+                                <i class="fas fa-calendar-alt me-1"></i> January 12, 2025
+                            </p>
+                            <p class="card-text">Everything you need to know about gold purity, karat systems, and how
+                                to identify genuine gold...</p>
+                            <a href="blog.html" class="btn btn-outline-primary btn-lg">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-preview-card bg-white text-dark rounded-3 shadow-sm h-100">
+                        <img src="img/Stock-market-Gold-chart-IMAGO-Westlight-Avalon_34_11zon.webp" class="card-img-top" alt="Gold Market Trends">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Gold Market Trends: What to Expect</h5>
+                            <p class="card-text text-muted small">
+                                <i class="fas fa-calendar-alt me-1"></i> January 10, 2025
+                            </p>
+                            <p class="card-text">Analysis of current gold market trends and expert predictions for the coming months...</p>
+                            <a href="blog.html" class="btn btn-outline-primary btn-lg">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="blog.html" class="btn btn-warning btn-lg rounded-pill">View All Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured-jewelry" class="py-5 bg-light-blue text-white">
+        <div class="container">
+            <h2 class="text-center mb-5 display-5 fw-bold">Our Exquisite jewellery Collection</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/elegant-gold-necklace-set-with-matching-earrings_1077802-32217_6_11zon.jpg" class="card-img-top" alt="Gold Necklace">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Elegant Gold Necklace</h5>
+                            <p class="card-text">Discover our beautifully crafted gold necklaces, perfect for any occasion.</p>
+                            <a href="latest design.html" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/OIP (4)_21_11zon.webp" class="card-img-top" alt="Diamond Earrings">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Sparkling Diamond Earrings</h5>
+                            <p class="card-text">Adorn yourself with our stunning diamond earrings, a timeless piece of beauty.</p>
+                            <a href="latest design.html" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/golden-bracelet-black-background_921026-9581_9_11zon.jpg" class="card-img-top" alt="Gold Bracelet">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold">Classic Gold Bracelet</h5>
+                            <p class="card-text">Find the perfect gold bracelet to complement your style and elegance.
+                            </p>
+                            <a href="latest design.html" class="btn btn-outline-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="latest design.html" class="btn btn-warning btn-lg rounded-pill">View for Latest Design</a>
+            </div>
+
+        </div>
+    </section>
+    
+       <!-- footer Section -->
+<footer class="bg-black text-white py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-3 text-white">
+                    <h5>SRISTAR GOLD COMPANY</h5>
+                    <p>Your trusted partner for buying, selling, and investing in gold.</p>
+                    <p><i class="fas fa-map-marker-alt me-2 text-white"></i>#280/1, Anniamma Arcade, 2nd Floor, Sampige Road, 18th Cross signal, Malleshwaram, Bangalore - 560003</p>
+                    <p><i class="fas fa-phone me-2 text-white"></i>+91 63 66 333 444</p>
+                    <p><i class="text-white fas fa-envelope me-2 "></i>sristargoldcompany@gmail.com</p>
+                </div>
+                <div class="col-lg-3 mb-3 footer-quick-links">
+                    <h5>Quick Links</h5>
+                    <div class="d-flex justify-content-center">
+                        <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white text-decoration-none"><i class="home"></i>Home</a></li>
+                        <li><a href="About Us.html" class="text-white text-decoration-none"><i class="About"></i>About us</a></li>
+                        <li><a href="branches.html" class="text-white text-decoration-none"><i class="branches"></i>Branches</a></li>                    
+                        <li><a href="album.html" class="text-white text-decoration-none"><i class="ablum"></i>Album</a></li>
+                        <li><a href="blog.html" class="text-white text-decoration-none"><i class="blogs"></i>Blogs</a></li>
+                        <li><a href="services.html" class="text-white text-decoration-none"><i class="services"></i>Services</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none"><i class="Contact Us"></i>Contact Us</a></li>
+                    </ul>                    
+                </div>
+                </div>
+                <div class="col-lg-3 mb-3 footer-follow-us">
+                    <h5>Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/sristargold" class="text-white text-decoration-none"><i class="fab fa-facebook-f me-2"></i>Facebook</a></li>
+                        <li><a href="https://x.com/sristargoldmall?s=21" class="text-white text-decoration-none"><i class="fab fa-twitter me-2"></i>Twitter</a></li>
+                        <li><a href="https://www.youtube.com/embed/0aC7-nrIfAk?si=V3jR5BI1DPyzcWno" class="text-white text-decoration-none"><i class="fab fa-youtube me-2"></i>YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Subscribe</h5>
+                    <p>Subscribe to our newsletter for updates.</p>
+                    <form>
+                        <div class="mb-2">
+                            <input type="email" class="form-control" placeholder="Your email">
+                        </div>
+                        <button type="submit" class="btn btn-sm btn-warning">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 SRISTAR GOLD COMPANY. All rights reserved.</p>
+                <p class="mb-0">Designed by SRISTAR Team</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="dropdown-enhancement.js"></script>
+    <script>
+      // Configure GoldAPI key for live price fetch in script.js
+      window.GOLD_API_KEY = 'goldapi-7mbr7usmemctj4y-io';
+    </script>
+    <script src="script.js"></script>
+    <script src="animated-testimonials.js"></script>
+    <script src="enhanced-functionality.js"></script>
+    <script src="navigation-fix.js"></script>
+</body>
+
+</html> 
